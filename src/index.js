@@ -2,6 +2,7 @@
 // Importing Part
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 
 // Variables
 const rootElement = document.getElementById('root');
