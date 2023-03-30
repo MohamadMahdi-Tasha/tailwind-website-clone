@@ -9,7 +9,7 @@ import ThemeChangerComponent from './chunks/themeChangerComponent';
 export default function HeaderComponent() {
     // Returning JSX
     return (
-        <header>
+        <header className='mb-[99px]'>
             <ContainerComponent className={'flex items-center justify-between gap-3 py-8'}>
                 <a href="#"><IconComponent type={'logo-typo'}/></a>
                 <ul className={'flex items-center gap-5'}>
