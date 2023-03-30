@@ -4,7 +4,7 @@ export default function ListLinkComponent({children, link}) {
     // Returning JSX
     return (
         <li>
-            <a href={(link === undefined) ? '#' : link}>
+            <a className='text-white font-semibold hover:text-cyan-400' href={(link === undefined) ? '#' : link}>
                 {children}
             </a>
         </li>

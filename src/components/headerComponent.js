@@ -10,15 +10,15 @@ export default function HeaderComponent() {
     // Returning JSX
     return (
         <header>
-            <ContainerComponent>
+            <ContainerComponent className={'flex items-center justify-between gap-3 py-8'}>
                 <a href="#"><IconComponent type={'logo-typo'}/></a>
-                <ul>
+                <ul className={'flex items-center gap-5'}>
                     <ListLinkComponent>Docs</ListLinkComponent>
                     <ListLinkComponent>Components</ListLinkComponent>
                     <ListLinkComponent>Blog</ListLinkComponent>
                     <ListLinkComponent>Showcase</ListLinkComponent>
-                    <li><div /></li>
-                    <li><ThemeChangerComponent /></li>
+                    <li><div className={'w-[10px] h-[20px] border-r-[1px] border-r-white/40'} /></li>
+                    <li className={'relative'}><ThemeChangerComponent /></li>
                     <ListLinkComponent
                         link={"https://www.github.com/MohamadMahdi-Tasha"} >
                         <IconComponent type={'github'}/>
