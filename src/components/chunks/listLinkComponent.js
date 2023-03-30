@@ -4,7 +4,7 @@ export default function ListLinkComponent({children, link}) {
     // Returning JSX
     return (
         <li>
-            <a href={(link === null) ? '#' : link}>
+            <a href={(link === undefined) ? '#' : link}>
                 {children}
             </a>
         </li>
