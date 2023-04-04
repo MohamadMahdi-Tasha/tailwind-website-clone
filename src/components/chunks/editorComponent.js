@@ -4,6 +4,6 @@
 export default function EditorComponent({children}) {
     // Returning JSX
     return (
-        <h1></h1>
+        <h1><pre>{children}</pre></h1>
     );
 }

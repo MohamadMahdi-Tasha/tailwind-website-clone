@@ -4,6 +4,7 @@ import SectionComponent from './components/sectionComponent';
 import HeaderComponent from './components/headerComponent';
 import IconComponent from "./components/chunks/iconComponent";
 import EditorComponent from './components/chunks/editorComponent';
+import ContainerComponent from './components/chunks/containerComponent';
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -11,7 +12,7 @@ export default function AppComponent() {
     return (
         <SectionComponent>
             <HeaderComponent />
-            <div>
+            <ContainerComponent className='mb-[120px]'>
                 <h1 className={'font-extrabold text-white text-6xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
                 <p className={'text-slate-400 text-center text-xl mb-9'}>
                     A utility-first CSS framework packed with classes like
@@ -32,9 +33,10 @@ export default function AppComponent() {
                         <kbd className='text-slate-500'>Ctrl K</kbd>
                     </button>
                 </div>
-            </div>
-            <EditorComponent>
-                {`<figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+            </ContainerComponent>
+            <ContainerComponent>
+                <EditorComponent>
+                    {`<figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
                     <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
                          src="/sarah-dayan.jpg" alt="" width="384" height="512">
                         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
@@ -55,7 +57,8 @@ export default function AppComponent() {
                             </figcaption>
                         </div>
                 </figure>`}
-            </EditorComponent>
+                </EditorComponent>
+            </ContainerComponent>
         </SectionComponent>
     );
 }
