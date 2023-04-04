@@ -59,7 +59,7 @@ export default function AppComponent() {
                 </div>
             </ContainerComponent>
             <ContainerComponent className='flex'>
-                <PreviewCodeComponent code={firstSectionsCode}/>
+                <PreviewCodeComponent className='absolute top-0 left-0' code={firstSectionsCode}/>
                 <EditorComponent language={'html'} code={firstSectionsCode} />
             </ContainerComponent>
         </SectionComponent>
