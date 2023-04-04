@@ -13,9 +13,8 @@
 pre[class*="language-"],
 code[class*="language-"] {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     text-shadow: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     direction: ltr;
     text-align: left;
     white-space: pre;
@@ -47,10 +46,9 @@ code[class*="language-"]::mozselection {
 }
 
 pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
-    background: #0f172a;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 1.5rem;
 }
 
 :not(pre) > code[class*="language-"] {
@@ -75,7 +73,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-    color: #aa7722 f;
+    color: #aa7722;
 }
 
 .token.property,

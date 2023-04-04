@@ -8,8 +8,7 @@ import ContainerComponent from './components/chunks/containerComponent';
 import PreviewCodeComponent from './components/chunks/previewCodeComponent';
 
 // Variables
-const firstSectionsCode = `
-<figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+const firstSectionsCode = `<figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
     <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/sarah-dayan.jpg" alt="" width="384" height="512">
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
         <blockquote>
@@ -59,7 +58,7 @@ export default function AppComponent() {
                 </div>
             </ContainerComponent>
             <ContainerComponent className='flex'>
-                <PreviewCodeComponent className='absolute top-0 left-0' code={firstSectionsCode}/>
+                <PreviewCodeComponent code={firstSectionsCode}/>
                 <EditorComponent language={'html'} code={firstSectionsCode} />
             </ContainerComponent>
         </SectionComponent>
