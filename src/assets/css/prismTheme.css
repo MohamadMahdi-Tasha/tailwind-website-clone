@@ -48,6 +48,7 @@ code[class*="language-"]::mozselection {
 pre[class*="language-"] {
     overflow-x: auto;
     overflow-y: hidden;
+    outline: none;
     padding-block: 1.5rem;
 }
 

@@ -8,7 +8,7 @@ import ContainerComponent from './components/chunks/containerComponent';
 import PreviewCodeComponent from './components/chunks/previewCodeComponent';
 
 // Variables
-const firstSectionsCode = `<figure class="md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[65%]">
+const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[56%]">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -58,8 +58,8 @@ export default function AppComponent() {
                 </div>
             </ContainerComponent>
             <ContainerComponent className='relative flex justify-end'>
-                <PreviewCodeComponent className={'absolute top-[50%] translate-y-[-50%] left-0 z-10 pointer-events-none'} code={firstSectionsCode}/>
-                <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[40%]'}/>
+                <PreviewCodeComponent code={firstSectionsCode}/>
+                <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%]'}/>
             </ContainerComponent>
         </SectionComponent>
     );
