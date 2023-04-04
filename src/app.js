@@ -79,7 +79,7 @@ export default function AppComponent() {
                         </p>
                         <CommentAuthorNameComponent isCentred img={'bg-purple-700'} job={'Creator of Tailwind CSS'} name={'Adam Wathan'}/>
                     </div>
-                    <div className={'relative h-[800px] overflow-hidden'}>
+                    <div className={'relative h-[800px] mb-[150px] overflow-hidden'}>
                         <div className={'w-full h-full bg-gradient-to-b from-transparent to-slate-900 flex items-end justify-center pointer-events-none absolute top-0'}>
                             <a className={'pointer-events-auto'} href="#"><button className='bg-slate-700 rounded-[10px] px-5 py-3 font-bold text-[15px] text-white hover:bg-slate-600' tabIndex={'-1'}>Show More ...</button></a>
                         </div>
@@ -115,6 +115,19 @@ export default function AppComponent() {
                                 </ul>
                             </li>
                         </ul>
+                    </div>
+                    <div>
+                        <img src="assets/img/section-icons/img-sect-2.png" alt="Constraint-based"/>
+                        <h6>Constraint-based</h6>
+                        <h1>An API for your design system.</h1>
+                        <p>Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
+                        <a href="#"><button tabIndex={'-1'}>Learn More ></button></a>
+                        <div>
+                            <button className={''}><IconComponent type={'sizing'} />Sizing</button>
+                            <button className={''}><IconComponent type={'colors'} />Colors</button>
+                            <button className={''}><IconComponent type={'typography'} />Typography</button>
+                            <button className={''}><IconComponent type={'shadows'} />Shadows</button>
+                        </div>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
