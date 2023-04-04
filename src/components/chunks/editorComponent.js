@@ -1,9 +1,24 @@
 // Codes By Mahdi Tasha
 // Importing Part
+import React, { useEffect } from "react";
+import Prism from 'prismjs';
+import '../../assets/prismTheme.css';
+
 // Creating Functional Component And Exporting It As Defualt
-export default function EditorComponent({children}) {
+export default function EditorComponent({children, language}) {
+    // Configuring Prism When Component Is Changed
+    useEffect(() => {
+        Prism.highlightAll();
+    }, []);
+
     // Returning JSX
     return (
-        <h1><pre>{children}</pre></h1>
+        <div>
+            <pre>
+                <code className={`language-${language}`}>
+                    {children}
+                </code>
+            </pre>
+        </div>
     );
 }
