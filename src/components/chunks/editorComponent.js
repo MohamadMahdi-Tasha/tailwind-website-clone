@@ -5,18 +5,16 @@ import Prism from 'prismjs';
 import '../../assets/prismTheme.css';
 
 // Creating Functional Component And Exporting It As Defualt
-export default function EditorComponent({children, language}) {
+export default function EditorComponent({code, language}) {
     // Configuring Prism When Component Is Changed
-    useEffect(() => {
-        Prism.highlightAll();
-    }, []);
+    useEffect(() => Prism.highlightAll());
 
     // Returning JSX
     return (
         <div>
             <pre>
                 <code className={`language-${language}`}>
-                    {children}
+                    {code}
                 </code>
             </pre>
         </div>
