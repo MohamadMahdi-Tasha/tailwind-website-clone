@@ -57,9 +57,9 @@ export default function AppComponent() {
                     </button>
                 </div>
             </ContainerComponent>
-            <ContainerComponent className='relative flex justify-end'>
+            <ContainerComponent className='relative h-[500px]'>
                 <PreviewCodeComponent code={firstSectionsCode}/>
-                <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%]'}/>
+                <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%] absolute right-0'}/>
             </ContainerComponent>
         </SectionComponent>
     );
