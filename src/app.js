@@ -33,7 +33,7 @@ const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] 
 export default function AppComponent() {
     // Returning JSX
     return (
-        <SectionComponent>
+        <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom'}>
             <HeaderComponent />
             <ContainerComponent className='mb-[120px]'>
                 <h1 className={'font-extrabold text-white text-6xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
