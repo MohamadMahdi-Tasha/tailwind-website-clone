@@ -8,6 +8,7 @@ import ContainerComponent from './components/chunks/containerComponent';
 import PreviewCodeComponent from './components/chunks/previewCodeComponent';
 import CommentComponent from './components/chunks/commentComponent';
 import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameComponent";
+import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 
 // Variables
 const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[56%]">
@@ -30,6 +31,36 @@ const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] 
         </figcaption>
     </div>
 </figure>`
+
+const secondSectionsCode = `<div class="p-4 rounded-xl bg-slate-800 w-[46%] absolute left-0">
+    <div class="border border-slate-100/30 space-y-4 p-4">
+      <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
+          w-96
+      </div>
+      <div class="w-80 bg-indigo-500 text-white shadow rounded px-5">
+          w-80
+      </div>
+      <div class="w-72 bg-indigo-500 text-white shadow rounded px-5">
+          w-72
+      </div>
+      <div class="w-64 bg-indigo-500 text-white shadow rounded px-5">
+          w-64
+      </div>
+      <div class="w-60 bg-indigo-500 text-white shadow rounded px-5">
+          w-60
+      </div>
+      <div class="w-56 bg-indigo-500 text-white shadow rounded px-5">
+          w-56
+      </div>
+      <div class="w-52 bg-indigo-500 text-white shadow rounded px-5">
+          w-52
+      </div>
+      <div class="w-48 bg-indigo-500 text-white shadow rounded px-5">
+          w-48
+      </div>
+    </div>
+</div>
+`
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -116,20 +147,26 @@ export default function AppComponent() {
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <img src="assets/img/section-icons/img-sect-2.png" alt="Constraint-based"/>
-                        <h6>Constraint-based</h6>
-                        <h1>An API for your design system.</h1>
-                        <p>Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
-                        <a href="#"><button tabIndex={'-1'}>Learn More ></button></a>
-                        <div>
-                            <button className={''}><IconComponent type={'sizing'} />Sizing</button>
-                            <button className={''}><IconComponent type={'colors'} />Colors</button>
-                            <button className={''}><IconComponent type={'typography'} />Typography</button>
-                            <button className={''}><IconComponent type={'shadows'} />Shadows</button>
+                    <div className='w-[70%] mb-10'>
+                        <img className={'border-[3px] w-[50px] h-[50px] mb-6 border-indigo-400 rounded-full'} src={SecondSectionIcon} alt="Constraint-based"/>
+                        <h6 className={'text-indigo-400 font-bold text-sm mb-3'}>Constraint-based</h6>
+                        <h1 className={'text-white font-bold text-3xl mb-5'}>An API for your design system.</h1>
+                        <p className={'text-slate-500 font-medium mb-8'}>Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
+                        <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600' tabIndex={'-1'}>Learn More ></button></a>
+                        <div className={'mt-9 flex gap-8'}>
+                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'sizing'} />Sizing</button>
+                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'colors'} />Colors</button>
+                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'typography'} />Typography</button>
+                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'shadows'} />Shadows</button>
                         </div>
                     </div>
                 </ContainerComponent>
+                <div className={'border-t border-t-slate-100/20 pt-10 h-[650px] bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent className={'relative'}>
+                        <EditorComponent language={'html'} code={secondSectionsCode} className={'w-[50%] absolute right-0 top-[-76px]'} />
+                        <PreviewCodeComponent code={secondSectionsCode}/>
+                    </ContainerComponent>
+                </div>
             </SectionComponent>
         </>
     );
