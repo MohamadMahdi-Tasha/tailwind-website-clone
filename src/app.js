@@ -11,7 +11,7 @@ import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameCom
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 
 // Variables
-const firstSectionsCode = `<figure class="absolute top-[50%] ml-[50px] translate-y-[-50%] left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[56%]">
+const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:ml-[50px] ml-0 md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -67,12 +67,12 @@ export default function AppComponent() {
     // Returning JSX
     return (
         <>
-            <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom'}>
+            <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom md:pb-0 pb-8'}>
                 <ContainerComponent className={'md:px-0 px-7'}>
                     <HeaderComponent />
                     <div className={'mb-[120px]'}>
-                        <h1 className={'font-extrabold text-white text-6xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
-                        <p className={'text-slate-400 text-center text-xl mb-9'}>
+                        <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
+                        <p className={'text-slate-400 text-center md:text-xl text-md mb-9'}>
                             A utility-first CSS framework packed with classes like
                             <span className={'text-cyan-400'}> flex </span>,
                             <span className={'text-cyan-400'}> pt-4 </span>,
@@ -82,8 +82,8 @@ export default function AppComponent() {
                             that can be composed to build any design, directly in your markup.
                         </p>
                         <div className={'flex justify-center'}>
-                            <a className='mr-7 w-32' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
-                            <button className={'flex w-80 items-center justify-between bg-slate-800 hover:bg-slate-700 border-t-2 border-t-white/10 rounded-lg px-3'}>
+                            <a className='mr-7 md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
+                            <button className={'md:flex hidden w-80 items-center justify-between bg-slate-800 hover:bg-slate-700 border-t-2 border-t-white/10 rounded-lg px-3'}>
                                 <h6 className='flex'>
                                     <IconComponent type={'search'} />
                                     <h6 className={'ml-2 text-slate-300'}>Quick Search ...</h6>
@@ -92,9 +92,9 @@ export default function AppComponent() {
                             </button>
                         </div>
                     </div>
-                    <div className={'relative h-[500px]'}>
+                    <div className={'relative md:h-[500px] h-auto'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%] absolute right-0 mr-[50px]'}/>
+                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] md:mt-0 mt-8 w-full md:absolute static right-0 md:mr-[50px] mr-0'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
