@@ -68,7 +68,7 @@ export default function AppComponent() {
     return (
         <>
             <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom md:pb-0 pb-8'}>
-                <ContainerComponent className={'md:px-0 px-4'}>
+                <ContainerComponent className={'md:p-0 p-4'}>
                     <HeaderComponent />
                     <div className={'mb-[120px]'}>
                         <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
@@ -99,10 +99,10 @@ export default function AppComponent() {
                 </ContainerComponent>
             </SectionComponent>
             <SectionComponent>
-                <ContainerComponent className={'md:px-0 px-4'}>
+                <ContainerComponent className={'md:p-0 p-4'}>
                     <div className={'mt-[150px] mb-[150px] text-center'}>
-                        <h1 className={'text-white text-[50px] font-bold mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
-                        <p className={'text-slate-500 text-[19px] font-semibold mb-9'}>
+                        <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
+                        <p className={'text-slate-400 text-center md:text-xl text-md mb-9'}>
                             I’ve written <span className={'text-cyan-500'}>a few thousand words</span> on why traditional “semantic class names” are the <br/>
                             reason CSS is hard to maintain, but the truth is you’re never going to believe me until you <br/>
                             actually try it. If you can suppress the urge to retch long enough to give it a chance, I <br/>
@@ -162,7 +162,7 @@ export default function AppComponent() {
                     </div>
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent className={'relative md:px-0 px-4'}>
+                    <ContainerComponent className={'relative md:p-0 p-4'}>
                         <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] md:mb-0 mb-8 w-full md:absolute static right-0 md:mr-[50px] mr-0 top-[-76px]'} />
                         <PreviewCodeComponent code={secondSectionsCode}/>
                     </ContainerComponent>
