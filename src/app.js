@@ -32,7 +32,7 @@ const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:ml-[50
     </div>
 </figure>`
 
-const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 w-[46%] absolute left-0 ml-[50px]">
+const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 md:w-[46%] w-full md:absolute static left-0 md:ml-[50px] ml-0">
     <div class="border border-slate-100/30 space-y-4 p-4">
       <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
           w-96
@@ -68,7 +68,7 @@ export default function AppComponent() {
     return (
         <>
             <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom md:pb-0 pb-8'}>
-                <ContainerComponent className={'md:px-0 px-7'}>
+                <ContainerComponent className={'md:px-0 px-4'}>
                     <HeaderComponent />
                     <div className={'mb-[120px]'}>
                         <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
@@ -82,7 +82,7 @@ export default function AppComponent() {
                             that can be composed to build any design, directly in your markup.
                         </p>
                         <div className={'flex justify-center'}>
-                            <a className='mr-7 md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
+                            <a className='md:mr-7 mr-0 md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
                             <button className={'md:flex hidden w-80 items-center justify-between bg-slate-800 hover:bg-slate-700 border-t-2 border-t-white/10 rounded-lg px-3'}>
                                 <h6 className='flex'>
                                     <IconComponent type={'search'} />
@@ -99,7 +99,7 @@ export default function AppComponent() {
                 </ContainerComponent>
             </SectionComponent>
             <SectionComponent>
-                <ContainerComponent>
+                <ContainerComponent className={'md:px-0 px-4'}>
                     <div className={'mt-[150px] mb-[150px] text-center'}>
                         <h1 className={'text-white text-[50px] font-bold mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
                         <p className={'text-slate-500 text-[19px] font-semibold mb-9'}>
@@ -114,7 +114,7 @@ export default function AppComponent() {
                         <div className={'w-full h-full bg-gradient-to-b from-transparent to-slate-900 flex items-end justify-center pointer-events-none absolute top-0'}>
                             <a className={'pointer-events-auto'} href="#"><button className='bg-slate-700 rounded-[10px] px-5 py-3 font-bold text-[15px] text-white hover:bg-slate-600' tabIndex={'-1'}>Show More ...</button></a>
                         </div>
-                        <ul className={'grid grid-cols-3 gap-8'}>
+                        <ul className={'grid md:grid-cols-3 grid-cols-1 gap-8'}>
                             <li>
                                 <ul className='flex flex-col gap-8'>
                                     <CommentComponent name={'Ryan Florence'} job={'Remix & React Training'}>I feel like an idiot for not using Tailwind CSS until now.</CommentComponent>
@@ -161,9 +161,9 @@ export default function AppComponent() {
                         </div>
                     </div>
                 </ContainerComponent>
-                <div className={'border-t border-t-slate-100/20 pt-10 h-[650px] bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent className={'relative'}>
-                        <EditorComponent language={'html'} code={secondSectionsCode} className={'w-[50%] absolute right-0 mr-[50px] top-[-76px]'} />
+                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent className={'relative md:px-0 px-4'}>
+                        <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] md:mb-0 mb-8 w-full md:absolute static right-0 md:mr-[50px] mr-0 top-[-76px]'} />
                         <PreviewCodeComponent code={secondSectionsCode}/>
                     </ContainerComponent>
                 </div>
