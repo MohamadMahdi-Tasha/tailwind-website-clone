@@ -11,7 +11,7 @@ import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameCom
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 
 // Variables
-const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[56%]">
+const firstSectionsCode = `<figure class="absolute top-[50%] ml-[50px] translate-y-[-50%] left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent w-[56%]">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -32,7 +32,7 @@ const firstSectionsCode = `<figure class="absolute top-[50%] translate-y-[-50%] 
     </div>
 </figure>`
 
-const secondSectionsCode = `<div class="p-4 rounded-xl bg-slate-800 w-[46%] absolute left-0">
+const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 w-[46%] absolute left-0 ml-[50px]">
     <div class="border border-slate-100/30 space-y-4 p-4">
       <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
           w-96
@@ -68,7 +68,7 @@ export default function AppComponent() {
     return (
         <>
             <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom'}>
-                <ContainerComponent>
+                <ContainerComponent className={'md:px-0 px-7'}>
                     <HeaderComponent />
                     <div className={'mb-[120px]'}>
                         <h1 className={'font-extrabold text-white text-6xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
@@ -94,7 +94,7 @@ export default function AppComponent() {
                     </div>
                     <div className={'relative h-[500px]'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%] absolute right-0'}/>
+                        <EditorComponent language={'html'} code={firstSectionsCode} className={'w-[50%] absolute right-0 mr-[50px]'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
@@ -163,7 +163,7 @@ export default function AppComponent() {
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 pt-10 h-[650px] bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <ContainerComponent className={'relative'}>
-                        <EditorComponent language={'html'} code={secondSectionsCode} className={'w-[50%] absolute right-0 top-[-76px]'} />
+                        <EditorComponent language={'html'} code={secondSectionsCode} className={'w-[50%] absolute right-0 mr-[50px] top-[-76px]'} />
                         <PreviewCodeComponent code={secondSectionsCode}/>
                     </ContainerComponent>
                 </div>

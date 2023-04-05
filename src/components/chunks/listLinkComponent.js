@@ -1,9 +1,9 @@
 // Codes By Mahdi Tasha
 // Creating Functional Component And Exporting It As Defualt
-export default function ListLinkComponent({children, link}) {
+export default function ListLinkComponent({children, link, className}) {
     // Returning JSX
     return (
-        <li>
+        <li className={className}>
             <a className='text-white font-semibold hover:text-cyan-400' href={(link === undefined) ? '#' : link}>
                 {children}
             </a>
