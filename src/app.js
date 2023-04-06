@@ -9,6 +9,7 @@ import PreviewCodeComponent from './components/chunks/previewCodeComponent';
 import CommentComponent from './components/chunks/commentComponent';
 import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameComponent";
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
+import FeaturesComponent from "./components/feturesComponent";
 
 // Variables
 const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
@@ -147,19 +148,14 @@ export default function AppComponent() {
                             </li>
                         </ul>
                     </div>
-                    <div className='md:w-[70%] w-full mt-[127px] mb-10'>
-                        <img className={'border-[3px] h-16 h-16 mb-6 border-indigo-400 rounded-full'} src={SecondSectionIcon} alt="Constraint-based"/>
-                        <h6 className={'text-indigo-400 font-bold text-lg mb-3'}>Constraint-based</h6>
-                        <h1 className={'text-white font-bold text-4xl mb-5'}>An API for your design system.</h1>
-                        <p className={'text-slate-500 font-medium mb-8'}>Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
-                        <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600' tabIndex={'-1'}>Learn More ></button></a>
-                        <div className={'mt-9 md:w-[60%] w-full flex gap-10 md:justify-around justify-between'}>
-                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'sizing'} />Sizing</button>
-                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'colors'} />Colors</button>
-                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'typography'} />Typography</button>
-                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'shadows'} />Shadows</button>
-                        </div>
-                    </div>
+                    <FeaturesComponent
+                        color={'text-indigo-400'}
+                        img={SecondSectionIcon}
+                        title={'Constraint-based'}
+                        subtitle={'An API for your design system.'}
+                        borderColor={'border-indigo-400'}>
+                            Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.
+                    </FeaturesComponent>
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <ContainerComponent>
