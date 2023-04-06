@@ -15,7 +15,7 @@ export default function EditorComponent({code,language,className}) {
 
     // Returning JSX
     return (
-        <div className={(className === undefined) ? `rounded-2xl border bg-slate-900/40 backdrop-blur-md border-slate-500/30 overflow-y-hidden` : `rounded-2xl border bg-slate-900/40 backdrop-blur-md border-slate-500/30 overflow-y-hidden ${className}`}>
+        <div className={(className === undefined) ? `md:rounded-2xl rounded-none border bg-slate-900/40 backdrop-blur-md border-slate-500/30 overflow-y-hidden` : `md:rounded-2xl rounded-none border bg-slate-900/40 backdrop-blur-md border-slate-500/30 overflow-y-hidden ${className}`}>
             <div className={'p-3 flex gap-1.5 w-full border-b border-b-slate-500/30'}>
                 <div className={'w-2.5 rounded-full h-2.5 bg-slate-600'}></div>
                 <div className={'w-2.5 rounded-full h-2.5 bg-slate-600'}></div>

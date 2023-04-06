@@ -12,7 +12,7 @@ import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 import FeaturesComponent from "./components/feturesComponent";
 
 // Variables
-const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
+const firstSectionsCode = `<figure class="absolute md:top-[50%] top-[57%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -33,7 +33,7 @@ const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:transl
     </div>
 </figure>`
 
-const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 md:w-[48%] w-full md:absolute static left-0">
+const secondSectionsCode = `<div class="p-4 rounded-xl bg-slate-800 md:w-[48%] w-full absolute left-0 md:top-auto top-0">
     <div class="border border-slate-100/30 space-y-4 p-4 overflow-auto">
       <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
           w-96
@@ -71,9 +71,9 @@ export default function AppComponent() {
             <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom md:pb-0 pb-8'}>
                 <ContainerComponent>
                     <HeaderComponent />
-                    <div className={'mb-[120px]'}>
+                    <div className={'md:mb-[120px] mb-[50px]'}>
                         <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
-                        <p className={'text-slate-400 text-center md:text-xl text-md mb-9'}>
+                        <p className={'text-slate-400 text-center md:text-xl text-lg mb-9'}>
                             A utility-first CSS framework packed with classes like
                             <span className={'text-cyan-400'}> flex </span>,
                             <span className={'text-cyan-400'}> pt-4 </span>,
@@ -93,15 +93,15 @@ export default function AppComponent() {
                             </button>
                         </div>
                     </div>
-                    <div className={'relative md:h-[500px] h-auto'}>
+                    <div className={'relative md:h-[500px] h-[700px]'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] md:mt-0 mt-8 w-full md:absolute static right-0'}/>
+                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] w-[97.4vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
             <SectionComponent>
                 <ContainerComponent>
-                    <div className={'mt-[150px] mb-[150px] text-center'}>
+                    <div className={'md:mt-[150px] mt-[100px] mb-[150px] text-center'}>
                         <h1 className={'font-extrabold text-white md:text-5xl text-4xl text-center mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
                         <p className={'text-slate-400 text-center md:text-xl text-md mb-9'}>
                             I’ve written <span className={'text-cyan-500'}>a few thousand words</span> on why traditional “semantic class names” are the <br/>
@@ -111,7 +111,7 @@ export default function AppComponent() {
                         </p>
                         <CommentAuthorNameComponent isCentred img={'bg-purple-700'} job={'Creator of Tailwind CSS'} name={'Adam Wathan'}/>
                     </div>
-                    <div className={'relative h-[800px] overflow-hidden'}>
+                    <div className={'relative md:h-[800px] h-[600px] overflow-hidden'}>
                         <div className={'w-full h-full bg-gradient-to-b from-transparent to-slate-900 pb-[70px] flex items-end justify-center pointer-events-none absolute top-0'}>
                             <a className={'pointer-events-auto'} href="#"><button className='bg-slate-700 rounded-[10px] px-5 py-3 font-bold text-[15px] text-white hover:bg-slate-600' tabIndex={'-1'}>Show More ...</button></a>
                         </div>
@@ -159,8 +159,8 @@ export default function AppComponent() {
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <ContainerComponent>
-                        <div className={'relative'}>
-                            <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] md:mb-0 mb-8 w-full md:absolute static right-0 top-[-104px]'} />
+                        <div className={'relative md:h-auto h-[1130px]'}>
+                            <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] w-[97.4vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
                             <PreviewCodeComponent code={secondSectionsCode}/>
                         </div>
                     </ContainerComponent>
