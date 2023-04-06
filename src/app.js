@@ -12,7 +12,7 @@ import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 import FeaturesComponent from "./components/feturesComponent";
 
 // Variables
-const firstSectionsCode = `<figure class="absolute md:top-[50%] top-[57%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
+const firstSectionsCode = `<figure class="absolute md:top-[50%] top-[69%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -93,7 +93,7 @@ export default function AppComponent() {
                             </button>
                         </div>
                     </div>
-                    <div className={'relative md:h-[500px] h-[700px]'}>
+                    <div className={'relative md:h-[500px] h-[750px]'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
                         <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] w-[97.4vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
                     </div>
