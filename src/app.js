@@ -82,7 +82,7 @@ export default function AppComponent() {
                             that can be composed to build any design, directly in your markup.
                         </p>
                         <div className={'flex justify-center'}>
-                            <a className='md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
+                            <a className='md:mr-4 mr-0 md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
                             <button className={'md:flex hidden w-80 items-center justify-between bg-slate-800 hover:bg-slate-700 border-t-2 border-t-white/10 rounded-lg px-3'}>
                                 <h6 className='flex'>
                                     <IconComponent type={'search'} />
