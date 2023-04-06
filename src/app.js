@@ -11,7 +11,7 @@ import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameCom
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 
 // Variables
-const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:ml-[50px] ml-0 md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
+const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
     <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
     <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
         <blockquote>
@@ -32,8 +32,8 @@ const firstSectionsCode = `<figure class="md:absolute static top-[50%] md:ml-[50
     </div>
 </figure>`
 
-const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 md:w-[46%] w-full md:absolute static left-0 md:ml-[50px] ml-0">
-    <div class="border border-slate-100/30 space-y-4 p-4">
+const secondSectionsCode = `<div class="p-4 ml-50 rounded-xl bg-slate-800 md:w-[48%] w-full md:absolute static left-0">
+    <div class="border border-slate-100/30 space-y-4 p-4 overflow-auto">
       <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
           w-96
       </div>
@@ -68,7 +68,7 @@ export default function AppComponent() {
     return (
         <>
             <SectionComponent className={'border-b border-b-slate-100/5 bg-[url("./assets/img/img-sect-1.png")] bg-no-repeat bg-cover bg-bottom md:pb-0 pb-8'}>
-                <ContainerComponent className={'md:p-0 p-4'}>
+                <ContainerComponent>
                     <HeaderComponent />
                     <div className={'mb-[120px]'}>
                         <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}>Rapidly build modern websites <br/> without ever leaving your HTML.</h1>
@@ -82,7 +82,7 @@ export default function AppComponent() {
                             that can be composed to build any design, directly in your markup.
                         </p>
                         <div className={'flex justify-center'}>
-                            <a className='md:mr-7 mr-0 md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
+                            <a className='md:w-32 w-full' href="#"><button tabIndex={'-1'} className={'rounded-lg border-t-2 border-t-white/30 bg-sky-500 hover:bg-sky-400 w-full py-3 text-white font-bold text-1xl'}>Get Started</button></a>
                             <button className={'md:flex hidden w-80 items-center justify-between bg-slate-800 hover:bg-slate-700 border-t-2 border-t-white/10 rounded-lg px-3'}>
                                 <h6 className='flex'>
                                     <IconComponent type={'search'} />
@@ -94,14 +94,14 @@ export default function AppComponent() {
                     </div>
                     <div className={'relative md:h-[500px] h-auto'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] md:mt-0 mt-8 w-full md:absolute static right-0 md:mr-[50px] mr-0'}/>
+                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] md:mt-0 mt-8 w-full md:absolute static right-0'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
             <SectionComponent>
-                <ContainerComponent className={'md:p-0 p-4'}>
+                <ContainerComponent>
                     <div className={'mt-[150px] mb-[150px] text-center'}>
-                        <h1 className={'font-extrabold text-white md:text-6xl text-4xl text-center mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
+                        <h1 className={'font-extrabold text-white md:text-5xl text-4xl text-center mb-5'}><blockquote>“Best practices” don’t actually work.</blockquote></h1>
                         <p className={'text-slate-400 text-center md:text-xl text-md mb-9'}>
                             I’ve written <span className={'text-cyan-500'}>a few thousand words</span> on why traditional “semantic class names” are the <br/>
                             reason CSS is hard to maintain, but the truth is you’re never going to believe me until you <br/>
@@ -110,8 +110,8 @@ export default function AppComponent() {
                         </p>
                         <CommentAuthorNameComponent isCentred img={'bg-purple-700'} job={'Creator of Tailwind CSS'} name={'Adam Wathan'}/>
                     </div>
-                    <div className={'relative h-[800px] mb-[150px] overflow-hidden'}>
-                        <div className={'w-full h-full bg-gradient-to-b from-transparent to-slate-900 flex items-end justify-center pointer-events-none absolute top-0'}>
+                    <div className={'relative h-[800px] overflow-hidden'}>
+                        <div className={'w-full h-full bg-gradient-to-b from-transparent to-slate-900 pb-[70px] flex items-end justify-center pointer-events-none absolute top-0'}>
                             <a className={'pointer-events-auto'} href="#"><button className='bg-slate-700 rounded-[10px] px-5 py-3 font-bold text-[15px] text-white hover:bg-slate-600' tabIndex={'-1'}>Show More ...</button></a>
                         </div>
                         <ul className={'grid md:grid-cols-3 grid-cols-1 gap-8'}>
@@ -147,24 +147,26 @@ export default function AppComponent() {
                             </li>
                         </ul>
                     </div>
-                    <div className='w-[70%] mb-10'>
-                        <img className={'border-[3px] w-[50px] h-[50px] mb-6 border-indigo-400 rounded-full'} src={SecondSectionIcon} alt="Constraint-based"/>
-                        <h6 className={'text-indigo-400 font-bold text-sm mb-3'}>Constraint-based</h6>
-                        <h1 className={'text-white font-bold text-3xl mb-5'}>An API for your design system.</h1>
+                    <div className='md:w-[70%] w-full mt-[127px] mb-10'>
+                        <img className={'border-[3px] h-16 h-16 mb-6 border-indigo-400 rounded-full'} src={SecondSectionIcon} alt="Constraint-based"/>
+                        <h6 className={'text-indigo-400 font-bold text-lg mb-3'}>Constraint-based</h6>
+                        <h1 className={'text-white font-bold text-4xl mb-5'}>An API for your design system.</h1>
                         <p className={'text-slate-500 font-medium mb-8'}>Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
                         <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600' tabIndex={'-1'}>Learn More ></button></a>
-                        <div className={'mt-9 flex gap-8'}>
-                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'sizing'} />Sizing</button>
-                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'colors'} />Colors</button>
-                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'typography'} />Typography</button>
-                            <button className={'flex flex-col items-center justify-center text-sm text-slate-500 hover:text-indigo-400'}><IconComponent type={'shadows'} />Shadows</button>
+                        <div className={'mt-9 md:w-[60%] w-full flex gap-10 md:justify-around justify-between'}>
+                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'sizing'} />Sizing</button>
+                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'colors'} />Colors</button>
+                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'typography'} />Typography</button>
+                            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}><IconComponent type={'shadows'} />Shadows</button>
                         </div>
                     </div>
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent className={'relative md:p-0 p-4'}>
-                        <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] md:mb-0 mb-8 w-full md:absolute static right-0 md:mr-[50px] mr-0 top-[-76px]'} />
-                        <PreviewCodeComponent code={secondSectionsCode}/>
+                    <ContainerComponent>
+                        <div className={'relative'}>
+                            <EditorComponent language={'html'} code={secondSectionsCode} className={'md:w-[50%] md:mb-0 mb-8 w-full md:absolute static right-0 top-[-104px]'} />
+                            <PreviewCodeComponent code={secondSectionsCode}/>
+                        </div>
                     </ContainerComponent>
                 </div>
             </SectionComponent>
