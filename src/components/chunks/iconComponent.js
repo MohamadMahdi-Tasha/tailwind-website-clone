@@ -122,5 +122,20 @@ export default function IconComponent({type, className}) {
                 <path d="M25 31v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V19a2 2 0 0 0-2-2h-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
             </svg>
         );
+    } else if (type === 'side-code') {
+        return (
+            <svg width="15" height="14" fill="none" stroke="currentColor">
+                <rect width="14" height="13" x="0.5" y="0.5" rx="3"></rect>
+                <path d="M7.5 0V14"></path>
+            </svg>
+        );
+    } else if (type === 'horizontal-dots') {
+        return (
+            <svg width="12" height="2" fill="currentColor">
+                <circle cx="1" cy="1" r="1"></circle>
+                <circle cx="6" cy="1" r="1"></circle>
+                <circle cx="11" cy="1" r="1"></circle>
+            </svg>
+        );
     }
 }

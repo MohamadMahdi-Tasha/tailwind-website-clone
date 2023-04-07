@@ -10,9 +10,11 @@ import CommentComponent from './components/chunks/commentComponent';
 import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameComponent";
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 import ThirdSectionIcon from './assets/img/section-icons/img-sect-3.png';
+import FourthSectionIcon from './assets/img/section-icons/img-sect-4.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
 import { firstSectionsCode, secondSectionsCode, thirdSectionsCode } from "./assets/js/codesOfExamples";
+import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -46,7 +48,7 @@ export default function AppComponent() {
                     </div>
                     <div className={'relative md:h-[500px] h-[750px]'}>
                         <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] w-[97.4vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
+                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
@@ -124,6 +126,20 @@ export default function AppComponent() {
                     </FeaturesComponent>
                 </ContainerComponent>
                 <FeaturesCodeComponent code={thirdSectionsCode}/>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-blue-400'}
+                        img={FourthSectionIcon}
+                        title={'Performance'}
+                        subtitle={'It’s tiny — never ship unused CSS again.'}
+                        borderColor={'border-blue-400'}
+                        cta={'Learn more'} hasNoButtons>
+                        Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
+                    </FeaturesComponent>
+                    <HtmlCssTerminalCodeComponent />
+                </ContainerComponent>
             </SectionComponent>
         </>
     );
