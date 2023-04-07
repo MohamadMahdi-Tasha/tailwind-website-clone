@@ -138,8 +138,10 @@ export default function AppComponent() {
                         cta={'Learn more'} hasNoButtons>
                         Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
                     </FeaturesComponent>
-                    <HtmlCssTerminalCodeComponent />
                 </ContainerComponent>
+                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent><HtmlCssTerminalCodeComponent /></ContainerComponent>
+                </div>
             </SectionComponent>
         </>
     );
