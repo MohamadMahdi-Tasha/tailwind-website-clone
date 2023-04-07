@@ -9,59 +9,10 @@ import PreviewCodeComponent from './components/chunks/previewCodeComponent';
 import CommentComponent from './components/chunks/commentComponent';
 import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameComponent";
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
+import ThirdSectionIcon from './assets/img/section-icons/img-sect-3.png';
 import FeaturesComponent from "./components/feturesComponent";
-
-// Variables
-const firstSectionsCode = `<figure class="absolute md:top-[50%] top-[69%] md:translate-y-[-50%] translate-y-0 left-0 z-10 md:flex overflow-hidden bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 border-t-[1.5px] border-t-slate-500/30 md:border-t-0 md:border-t-transparent md:w-[56%] w-full">
-    <div class="w-24 h-24 md:w-[500px] md:h-auto md:rounded-none rounded-full mx-auto bg-amber-600"></div>
-    <div class="pt-6 md:p-8 text-center md:text-left space-y-4 md:border-t-[1.5px] md:border-t-slate-500/30 md:rounded-r-xl">
-        <blockquote>
-             <p class="text-lg font-medium text-white">
-                 “Tailwind CSS is the only framework that I've seen scale
-                 on large teams. It’s easy to customize, adapts to any design,
-                 and the build size is tiny.”
-             </p>
-        </blockquote>
-        <figcaption class="font-medium">
-             <div class="text-sky-500 dark:text-sky-400">
-                 Sarah Dayan
-             </div>
-             <div class="text-slate-700 dark:text-slate-500">
-                 Staff Engineer, Algolia
-             </div>
-        </figcaption>
-    </div>
-</figure>`
-
-const secondSectionsCode = `<div class="p-4 rounded-xl bg-slate-800 md:w-[48%] w-full absolute left-0 md:top-auto top-0">
-    <div class="border border-slate-100/30 space-y-4 p-4 overflow-auto">
-      <div class="w-96 bg-indigo-500 text-white shadow rounded px-5">
-          w-96
-      </div>
-      <div class="w-80 bg-indigo-500 text-white shadow rounded px-5">
-          w-80
-      </div>
-      <div class="w-72 bg-indigo-500 text-white shadow rounded px-5">
-          w-72
-      </div>
-      <div class="w-64 bg-indigo-500 text-white shadow rounded px-5">
-          w-64
-      </div>
-      <div class="w-60 bg-indigo-500 text-white shadow rounded px-5">
-          w-60
-      </div>
-      <div class="w-56 bg-indigo-500 text-white shadow rounded px-5">
-          w-56
-      </div>
-      <div class="w-52 bg-indigo-500 text-white shadow rounded px-5">
-          w-52
-      </div>
-      <div class="w-48 bg-indigo-500 text-white shadow rounded px-5">
-          w-48
-      </div>
-    </div>
-</div>
-`
+import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
+import { firstSectionsCode, secondSectionsCode, thirdSectionsCode } from "./assets/js/codesOfExamples";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -153,18 +104,26 @@ export default function AppComponent() {
                         img={SecondSectionIcon}
                         title={'Constraint-based'}
                         subtitle={'An API for your design system.'}
-                        borderColor={'border-indigo-400'}>
+                        borderColor={'border-indigo-400'}
+                        cta={'Learn More'}>
                             Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent>
-                        <div className={'relative md:h-auto h-[1130px]'}>
-                            <EditorComponent language={'html'} height={'h-[600px]'} code={secondSectionsCode} className={'md:w-[50%] w-[97.4vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
-                            <PreviewCodeComponent code={secondSectionsCode}/>
-                        </div>
-                    </ContainerComponent>
-                </div>
+                <FeaturesCodeComponent code={secondSectionsCode}/>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-pink-400'}
+                        img={ThirdSectionIcon}
+                        title={'Build anything'}
+                        subtitle={'Build whatever you want, seriously.'}
+                        borderColor={'border-pink-400'}
+                        cta={'Get Started'}>
+                        Because Tailwind is so low-level, it never encourages you to design the same site twice. Even with the same color palette and sizing scale, it's easy to build the same component with a completely different look in the next project.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <FeaturesCodeComponent code={thirdSectionsCode}/>
             </SectionComponent>
         </>
     );
