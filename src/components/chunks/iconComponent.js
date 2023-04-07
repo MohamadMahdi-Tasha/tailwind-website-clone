@@ -1,6 +1,6 @@
 // Codes By Mahdi Tasha
 // Creating Functional Component And Exporting It As Defualt
-export default function IconComponent({type, className}) {
+export default function IconComponent({type, className, width, height}) {
     // Conditional Rendering
     if (type === 'logo-typo') {
         return (
@@ -84,7 +84,7 @@ export default function IconComponent({type, className}) {
         );
     } else if (type === 'x') {
         return (
-            <svg viewBox="0 0 10 10" className="w-2.5 h-2.5 overflow-visible" aria-hidden="true">
+            <svg viewBox="0 0 10 10" width={(width === undefined) ? '24px' : width} height={(height === undefined) ? '24px' : height} aria-hidden="true">
                 <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path>
             </svg>
         );

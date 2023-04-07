@@ -69,17 +69,21 @@ export default function HtmlCssTerminalCodeComponent() {
 
     // Returning JSX
     return(
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <button>index.html <IconComponent type={'x'}/></button>
-                            <button>tailwind.config.js</button>
-                            <button>package.json</button>
+        <div className={'md:flex md:static absolute top-0 left-0 md:w-full w-[100vw] block md:rounded-2xl rounded-0 border backdrop-blur-md border-slate-500/30 overflow-hidden'}>
+            <div className={'md:w-[50%] w-full'}>
+                <div className={'border-b border-b-slate-500/30'}>
+                    <div className={'mt-2 w-full overflow-auto flex'}>
+                        <button className={'py-2 border-b border-b-cyan-500 px-4 text-xs text-cyan-500 flex items-center justify-between'}><span className={'mr-4'}>index.html</span> <IconComponent width={'7px'} height={'7px'} type={'x'}/></button>
+                        <div className={'border overflow-hidden border-slate-500/30 flex justify-between items-center bg-slate-600/10 w-full rounded-tl-md rounded-tr-md'}>
+                            <div className={'flex items-center'}>
+                                <button className={'py-2 px-4 text-xs text-slate-500 border-r border-r-slate-500/30'}>tailwind.config.js</button>
+                                <button className={'py-2 px-4 text-xs text-slate-500 italic border-r border-r-slate-500/30'}>package.json</button>
+                            </div>
+                            <div className={'flex items-center'}>
+                                <button className={'w-[40px] h-[30px] text-slate-500 flex items-center justify-center'}><IconComponent type={'side-code'}/></button>
+                                <button className={'w-[40px] h-[30px] text-slate-500 flex items-center justify-center'}><IconComponent type={'horizontal-dots'}/></button>
+                            </div>
                         </div>
-                        <button><IconComponent type={'side-code'}/></button>
-                        <button><IconComponent type={'horizontal-dots'}/></button>
                     </div>
                     <pre>
                         <code className={`line-numbers language-html`}>
@@ -88,19 +92,25 @@ export default function HtmlCssTerminalCodeComponent() {
                     </pre>
                 </div>
                 <div>
-                    <div>
-                        <div><button>Terminal</button></div>
-                        <button><IconComponent type={'horizontol-dots'}/></button>
+                    <div className={'mt-2 w-full overflow-auto flex'}>
+                        <button className={'py-2 border-b border-b-cyan-500 px-4 text-xs text-cyan-500 flex items-center justify-between'}>Terminal</button>
+                        <div className={'border-l border-b border-t overflow-hidden border-slate-500/30 flex justify-between items-center bg-slate-600/10 w-full rounded-tl-md'}>
+                            <div className={'flex items-center'}></div>
+                            <div className={'flex items-center'}><button className={'w-[40px] h-[30px] text-slate-500 flex items-center justify-center'}><IconComponent type={'horizontal-dots'}/></button></div>
+                        </div>
                     </div>
-                    <pre><code className={`language-`}>{terminalCode}</code></pre>
+                    <pre className={'px-4 md:h-[150px] h-auto'}><code className={`language-`}>{terminalCode}</code></pre>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div><button>build.css <IconComponent type={'x'}/></button></div>
-                    <button><IconComponent type={'horizontal-dots'}/></button>
+            <div className={'md:w-[50%] w-full'}>
+                <div className={'mt-2 w-full overflow-auto flex'}>
+                    <button className={'py-2 border-b border-b-cyan-500 px-4 text-xs text-cyan-500 flex items-center justify-between'}><span className={'mr-4'}>build.css</span> <IconComponent width={'7px'} height={'7px'} type={'x'}/></button>
+                    <div className={'border-l border-b border-t overflow-hidden border-slate-500/30 flex justify-between items-center bg-slate-600/10 w-full rounded-tl-md'}>
+                        <div className={'flex items-center'}></div>
+                        <div className={'flex items-center'}><button className={'w-[40px] h-[30px] text-slate-500 flex items-center justify-center'}><IconComponent type={'horizontal-dots'}/></button></div>
+                    </div>
                 </div>
-                <pre><code className={`line-numbers language-css`}>{cssCode}</code></pre>
+                <pre className={'md:h-[527px] h-auto border-l border-l-slate-500/30'}><code className={`line-numbers language-css`}>{cssCode}</code></pre>
             </div>
         </div>
     );
