@@ -11,9 +11,10 @@ import CommentAuthorNameComponent from "./components/chunks/commentAuthorNameCom
 import SecondSectionIcon from './assets/img/section-icons/img-sect-2.png';
 import ThirdSectionIcon from './assets/img/section-icons/img-sect-3.png';
 import FourthSectionIcon from './assets/img/section-icons/img-sect-4.png';
+import FifthSectionIcon from './assets/img/section-icons/img-sect-5.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
-import { firstSectionsCode, secondSectionsCode, thirdSectionsCode } from "./assets/js/codesOfExamples";
+import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode } from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 
 // Creating Functional Component And Exporting It As Defualt
@@ -142,6 +143,44 @@ export default function AppComponent() {
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] relative h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <ContainerComponent><HtmlCssTerminalCodeComponent /></ContainerComponent>
                 </div>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-indigo-400'}
+                        img={FifthSectionIcon}
+                        title={'Mobile-first'}
+                        subtitle={'Responsive everything.'}
+                        borderColor={'border-indigo-400'}
+                        cta={'Learn more'} hasNoButtons>
+                        Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <div className={'border-b border-b-slate-500/30'}>
+                    <ContainerComponent>
+                        <div className="relative">
+                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[640px]'}>
+                                <div className={'bg-slate-700 text-white border-t-2 border-t-slate-500/30 w-[30px] flex justify-center items-center text-xs rounded-md h-[30px] absolute left-[10px] top-0'}>sm</div>
+                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
+                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
+                            </div>
+                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[768px]'}>
+                                <div className={'bg-slate-700 text-white border-t-2 border-t-slate-500/30 w-[30px] flex justify-center items-center text-xs rounded-md h-[30px] absolute left-[10px] top-0'}>md</div>
+                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
+                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
+                            </div>
+                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[1024px]'}>
+                                <div className={'bg-slate-700 text-white border-t-2 border-t-slate-500/30 w-[30px] flex justify-center items-center text-xs rounded-md h-[30px] absolute left-[10px] top-0'}>lg</div>
+                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
+                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
+                            </div>
+                        </div>
+                    </ContainerComponent>
+                </div>
+                <ContainerComponent>
+                    <PreviewCodeComponent code={fifthSectionsCode} />
+                    <EditorComponent language={'html'} code={fifthSectionsCode} />
+                </ContainerComponent>
             </SectionComponent>
         </>
     );
