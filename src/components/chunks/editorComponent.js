@@ -6,7 +6,7 @@ import LineNumbersFunction from '../../assets/js/prsimLineNumber';
 import '../../assets/css/prismTheme.css';
 
 // Creating Functional Component And Exporting It As Defualt
-export default function EditorComponent({code,language,className}) {
+export default function EditorComponent({code,language,className,height}) {
     // Configuring Prism When Component Is Changed
     useEffect(() => {
         Prism.highlightAll();
@@ -21,7 +21,11 @@ export default function EditorComponent({code,language,className}) {
                 <div className={'w-2.5 rounded-full h-2.5 bg-slate-600'}></div>
                 <div className={'w-2.5 rounded-full h-2.5 bg-slate-600'}></div>
             </div>
-            <pre><code className={`line-numbers language-${language}`}>{code}</code></pre>
+            <pre className={(height === undefined) ? 'h-auto' : height}>
+                <code className={`line-numbers language-${language}`}>
+                    {code}
+                </code>
+            </pre>
         </div>
     );
 }
