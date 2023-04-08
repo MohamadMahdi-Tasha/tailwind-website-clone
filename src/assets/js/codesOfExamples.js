@@ -90,9 +90,9 @@ export const fifthSectionsCode = `<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8
       <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">Entire house</p>
     </div>
     <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
-      <img src="/beach-house.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
-      <img src="/beach-house-interior-1.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
-      <img src="/beach-house-interior-2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <div class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full bg-amber-400"></div>
+      <div class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32 bg-amber-400"></div>
+      <div class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32 bg-amber-400"></div>
     </div>
     <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
       <dt class="sr-only">Reviews</dt>
@@ -103,7 +103,7 @@ export const fifthSectionsCode = `<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8
         <span>4.89 <span class="text-slate-400 font-normal">(128)</span></span>
       </dd>
       <dt class="sr-only">Location</dt>
-      <dd class="flex items-center">
+      <dd class="flex items-center dark:text-slate-400">
         <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
           <circle cx="1" cy="1" r="1" />
         </svg>

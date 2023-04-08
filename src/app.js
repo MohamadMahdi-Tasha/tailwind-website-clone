@@ -17,6 +17,7 @@ import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
 import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode } from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
+import BrowserComponent from "./components/chunks/browserComponent";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -157,19 +158,23 @@ export default function AppComponent() {
                         Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <div className={'border-b border-b-slate-500/30'}>
+                <div className={'border-b mb-10 border-b-slate-500/30'}>
                     <ContainerComponent>
                         <div className="relative">
                             <MediaQuerysComponent isSelected={true} sizeName={'sm'} fromLeft={'640'}/>
-                            <MediaQuerysComponent isSelected={false} sizeName={'md'} fromLeft={'768'}/>
-                            <MediaQuerysComponent isSelected={false} sizeName={'lg'} fromLeft={'1024'}/>
+                            <MediaQuerysComponent isSelected={true} sizeName={'md'} fromLeft={'768'}/>
+                            <MediaQuerysComponent isSelected={true} sizeName={'lg'} fromLeft={'1024'}/>
                         </div>
                     </ContainerComponent>
                 </div>
-                <ContainerComponent>
-                    <PreviewCodeComponent code={fifthSectionsCode} />
-                    <EditorComponent language={'html'} code={fifthSectionsCode} />
-                </ContainerComponent>
+                <div className={'border-t relative border-t-slate-500/30 pt-10 md:h-[1000px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent className={'relative'}>
+                        <div className={'absolute left-0 w-full px-8 top-[-50px]'}>
+                            <BrowserComponent className={'mb-8'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
+                            <EditorComponent height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
+                        </div>
+                    </ContainerComponent>
+                </div>
             </SectionComponent>
         </>
     );
