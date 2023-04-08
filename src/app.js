@@ -16,6 +16,7 @@ import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
 import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode } from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
+import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -159,21 +160,9 @@ export default function AppComponent() {
                 <div className={'border-b border-b-slate-500/30'}>
                     <ContainerComponent>
                         <div className="relative">
-                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[640px]'}>
-                                <div className={'bg-slate-800 text-slate-500 border-t font-mono border-t-slate-500/30 w-[25px] h-[25px] flex justify-center items-center text-xs rounded-md absolute left-[15px] top-0'}>sm</div>
-                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
-                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
-                            </div>
-                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[768px]'}>
-                                <div className={'bg-slate-800 text-slate-500 border-t font-mono border-t-slate-500/30 w-[25px] h-[25px] flex justify-center items-center text-xs rounded-md absolute left-[15px] top-0'}>md</div>
-                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
-                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
-                            </div>
-                            <div className={'absolute bottom-[-5px] flex flex-col items-center justify-center left-[1024px]'}>
-                                <div className={'bg-slate-800 text-slate-500 border-t font-mono border-t-slate-500/30 w-[25px] h-[25px] flex justify-center items-center text-xs rounded-md absolute left-[15px] top-0'}>lg</div>
-                                <div className={'w-[1px] h-[50px] bg-slate-500/30'}></div>
-                                <div className={'border-2 bg-slate-900 border-slate-500/30 rounded-full w-[10px] h-[10px]'}></div>
-                            </div>
+                            <MediaQuerysComponent isSelected={false} sizeName={'sm'} fromLeft={'640'}/>
+                            <MediaQuerysComponent isSelected={false} sizeName={'md'} fromLeft={'768'}/>
+                            <MediaQuerysComponent isSelected={false} sizeName={'lg'} fromLeft={'1024'}/>
                         </div>
                     </ContainerComponent>
                 </div>
