@@ -13,9 +13,10 @@ import ThirdSectionIcon from './assets/img/section-icons/img-sect-3.png';
 import FourthSectionIcon from './assets/img/section-icons/img-sect-4.png';
 import FifthSectionIcon from './assets/img/section-icons/img-sect-5.png';
 import SixthSectionIcon from './assets/img/section-icons/img-sect-6.png';
+import SeventhSectionIcon from './assets/img/section-icons/img-sect-7.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
-import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode, sixthSectionsCode} from "./assets/js/codesOfExamples";
+import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode, sixthSectionsCode, seventhSectionsCode, seventhSectionsCodePreview} from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 import BrowserComponent from "./components/chunks/browserComponent";
@@ -181,11 +182,32 @@ export default function AppComponent() {
                         title={'State variants'}
                         subtitle={'Hover and focus states? We got ’em.'}
                         borderColor={'border-blue-400'}
-                        cta={'Learn More'}>
+                        cta={'Learn More'} hasNoButtons>
                         Want to style something on hover? Stick <span className={'text-white'}>hover:</span> at the beginning of the class you want to add. Works for <span className={'text-white'}>focus:</span>, <span className={'text-white'}>active:</span>, <span className={'text-white'}>disabled:</span>, <span className={'text-white'}>focus-within:</span>, <span className={'text-white'}>focus-visible:</span>, and even fancy states we invented ourselves like <span className={'text-white'}>group-hover</span>.
                     </FeaturesComponent>
                 </ContainerComponent>
                 <FeaturesCodeComponent code={sixthSectionsCode}/>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-blue-400'}
+                        img={SeventhSectionIcon}
+                        title={'Component-driven'}
+                        subtitle={'Worried about duplication? Don’t be.'}
+                        borderColor={'border-blue-400'}
+                        cta={'Learn More'}>
+                        If you're repeating the same utilities over and over and over again, all you have to do is extract them into a component or template partial and boom — you've got a single source of truth so you can make changes in one place.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent>
+                        <div className={'relative md:h-auto h-[1130px]'}>
+                            <EditorComponent language={'js,html'} height={'h-[600px]'} code={seventhSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
+                            <PreviewCodeComponent code={seventhSectionsCodePreview}/>
+                        </div>
+                    </ContainerComponent>
+                </div>
             </SectionComponent>
         </>
     );

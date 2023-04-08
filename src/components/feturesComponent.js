@@ -38,6 +38,15 @@ export default function FeaturesComponent({img, color ,borderColor, title, subti
                     <SelectableButtonComponent type={'brutalist'}/>
                 </>
             );
+        } else if (title === 'Component-driven') {
+            return (
+                <>
+                    <SelectableButtonComponent type={'react'}/>
+                    <SelectableButtonComponent type={'vue'}/>
+                    <SelectableButtonComponent type={'angular'}/>
+                    <SelectableButtonComponent type={'blade'}/>
+                </>
+            );
         }
     }
 

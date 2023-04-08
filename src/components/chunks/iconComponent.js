@@ -183,6 +183,39 @@ export default function IconComponent({type, className, width, height}) {
                 <path d="m10 7 5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
             </svg>
         );
+    } else if (type === 'react') {
+        return (
+            <svg width="48" height="48" fill="none" aria-hidden="true">
+                <path d="M30.685 27.536c-5.353 9.182-12.462 15.042-15.878 13.089-3.416-1.953-1.846-10.98 3.508-20.161 5.353-9.182 12.462-15.042 15.878-13.089 3.416 1.953 1.846 10.98-3.508 20.161Z"        fill="currentColor" fillOpacity=".1" stroke="currentColor" strokeWidth="2"></path>
+                <ellipse cx="24" cy="24" rx="7" ry="19" transform="rotate(90 24 24)" fill="currentColor" fillOpacity=".1" stroke="currentColor" stroke-width="2"></ellipse>
+                <path d="M17.315 27.536c5.353 9.182 12.462 15.042 15.878 13.089 3.416-1.953 1.846-10.98-3.508-20.161-5.353-9.182-12.462-15.042-15.878-13.089-3.416 1.953-1.846 10.98 3.508 20.161Z"        fill="currentColor" fillOpacity=".1" stroke="currentColor" strokeWidth="2"></path>
+                <path d="M24 27a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="currentColor" stroke="currentColor" strokeWidth="2"></path>
+            </svg>
+        );
+    } else if (type === 'vue') {
+        return (
+            <svg width="48" height="48" fill="none" aria-hidden="true">
+                <path d="M24 12.814 20.474 7H15l9 15 9-15h-5.476l-3.525 5.814Z" fill="currentColor" fillOpacity="0" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"></path>
+                <path d="M37.408 7 24 28.982 10.592 7H3l21 34L45 7h-7.592Z" fill="currentColor" fillOpacity="0" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"></path>
+            </svg>
+        );
+    } else if (type === 'angular') {
+        return (
+            <svg width="48" height="48" fill="none" aria-hidden="true">
+                <path d="M10 35 7 12l17-7 17 7-3 23-14 8-14-8Z" fill="currentColor" fillOpacity="0" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"></path>
+                <path d="M20 25h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path fillRule="evenodd" clipRule="evenodd" d="M32.617 31 24 13.764 15.381 31h2.236l6.382-12.764L30.381 31h2.236Z" fill="currentColor"></path>
+            </svg>
+        );
+    } else if (type === 'blade') {
+        return (
+            <svg width="48" height="48" fill="none" aria-hidden="true">
+                <path d="m7.5 10.5 6.5-3 7 3.5v16l7-4v-8l7-4 7 4v8l-7 3.5V34l-14 7.5L7.5 34V10.5Z" fill="currentColor" fillOpacity="0"></path>
+                <path d="m7 11 7-4 7 4-7 4-7-4ZM21 11v16M21 35v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M7 11v23l14 8 14-8V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M14 15v16l7 4 21-12v-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="m28 15 7-4 7 4-7 4-7-4ZM28 15v8l7 4M14 31l14-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+        );
     }
-
 }

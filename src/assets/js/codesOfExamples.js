@@ -186,3 +186,183 @@ export const sixthSectionsCode = `<div class='bg-slate-800 rounded-xl md:w-[48%]
         </div>
     </div>
 </div>`
+
+export const seventhSectionsCode = `import Nav from './Nav.js'
+import NavItem from './NavItem.js'
+import List from './List.js'
+import ListItem from './ListItem.js'
+
+export default function Movies({ movies }) {
+  return (
+    <div className="divide-y divide-slate-100">
+      <Nav>
+        <NavItem href="/new" isActive>New Releases</NavItem>
+        <NavItem href="/top">Top Rated</NavItem>
+        <NavItem href="/picks">Vincent’s Picks</NavItem>
+      </Nav>
+      <List>
+        {movies.map((movie) => (
+          <ListItem key={movie.id} movie={movie} />
+        ))}
+      </List>
+    </div>
+  )
+}`
+
+export const seventhSectionsCodePreview = `<div class="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 divide-y divide-slate-100 my-auto xl:mt-18 dark:bg-slate-800 dark:divide-slate-200/5 dark:highlight-white/10 md:w-[48%] w-full">
+  <nav class="py-4 px-4 sm:px-6 lg:px-4 xl:px-6 text-sm font-medium">
+    <ul class="flex space-x-3">
+      <li>
+        <div class="px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer">New<span
+                class="hidden sm:inline lg:hidden xl:inline"> Releases</span></div>
+      </li>
+      <li>
+        <div class="px-3 py-2 rounded-md bg-slate-50 cursor-pointer dark:bg-transparent dark:text-slate-300 dark:ring-1 dark:ring-slate-700">
+          Top<span class="hidden sm:inline"> Rated</span></div>
+      </li>
+      <li>
+        <div class="px-3 py-2 rounded-md bg-slate-50 cursor-pointer dark:bg-transparent dark:text-slate-300 dark:ring-1 dark:ring-slate-700">
+          Vincent’s Picks
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <article class="p-4 sm:p-6 lg:p-4 xl:p-6 space-x-4 items-start sm:space-x-6 lg:space-x-4 xl:space-x-6 flex">
+  <div class="flex-none rounded-md w-[60px] h-[88px] bg-amber-400"></div>
+    <div class="min-w-0 relative flex-auto"><h2
+            class="font-semibold text-slate-900 truncate sm:pr-20 dark:text-slate-100">Prognosis Negative</h2>
+      <dl class="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+        <div class="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
+          <dt class="text-sky-500"><span class="sr-only">Star rating</span>
+            <svg width="16" height="20" fill="currentColor">
+              <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z"></path>
+            </svg>
+          </dt>
+          <dd>2.66</dd>
+        </div>
+        <div class="dark:text-slate-200">
+          <dt class="sr-only">Rating</dt>
+          <dd class="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">PG-13</dd>
+        </div>
+        <div class="ml-2">
+          <dt class="sr-only">Year</dt>
+          <dd>2021</dd>
+        </div>
+        <div>
+          <dt class="sr-only">Genre</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            Comedy
+          </dd>
+        </div>
+        <div>
+          <dt class="sr-only">Runtime</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            1h 46m
+          </dd>
+        </div>
+        <div class="flex-none w-full mt-2 font-normal">
+          <dt class="sr-only">Cast</dt>
+          <dd class="text-slate-400">Simon Pegg, Zach Galifianakis</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
+  <article class="p-4 sm:p-6 lg:p-4 xl:p-6 space-x-4 items-start sm:space-x-6 lg:space-x-4 xl:space-x-6 flex">
+    <div class="flex-none rounded-md w-[60px] h-[88px] bg-amber-400"></div>
+    <div class="min-w-0 relative flex-auto"><h2
+            class="font-semibold text-slate-900 truncate sm:pr-20 dark:text-slate-100">Rochelle, Rochelle</h2>
+      <dl class="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+        <div class="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
+          <dt class="text-sky-500"><span class="sr-only">Star rating</span>
+            <svg width="16" height="20" fill="currentColor">
+              <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z"></path>
+            </svg>
+          </dt>
+          <dd>3.25</dd>
+        </div>
+        <div class="dark:text-slate-200">
+          <dt class="sr-only">Rating</dt>
+          <dd class="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">R</dd>
+        </div>
+        <div class="ml-2">
+          <dt class="sr-only">Year</dt>
+          <dd>2020</dd>
+        </div>
+        <div>
+          <dt class="sr-only">Genre</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            Romance
+          </dd>
+        </div>
+        <div>
+          <dt class="sr-only">Runtime</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            1h 56m
+          </dd>
+        </div>
+        <div class="flex-none w-full mt-2 font-normal">
+          <dt class="sr-only">Cast</dt>
+          <dd class="text-slate-400">Emilia Clarke</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
+  <article class="p-4 sm:p-6 lg:p-4 xl:p-6 space-x-4 items-start sm:space-x-6 lg:space-x-4 xl:space-x-6 hidden sm:flex">
+     <div class="flex-none rounded-md w-[60px] h-[88px] bg-amber-400"></div>
+    <div class="min-w-0 relative flex-auto"><h2
+            class="font-semibold text-slate-900 truncate sm:pr-20 dark:text-slate-100">Death Blow</h2>
+      <dl class="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+        <div class="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
+          <dt class="text-sky-500"><span class="sr-only">Star rating</span>
+            <svg width="16" height="20" fill="currentColor">
+              <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z"></path>
+            </svg>
+          </dt>
+          <dd>4.95</dd>
+        </div>
+        <div class="dark:text-slate-200">
+          <dt class="sr-only">Rating</dt>
+          <dd class="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">18A</dd>
+        </div>
+        <div class="ml-2">
+          <dt class="sr-only">Year</dt>
+          <dd>2020</dd>
+        </div>
+        <div>
+          <dt class="sr-only">Genre</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            Action
+          </dd>
+        </div>
+        <div>
+          <dt class="sr-only">Runtime</dt>
+          <dd class="flex items-center">
+            <svg width="2" height="2" fill="currentColor" class="mx-2 text-slate-300" aria-hidden="true">
+              <circle cx="1" cy="1" r="1"></circle>
+            </svg>
+            2h 5m
+          </dd>
+        </div>
+        <div class="flex-none w-full mt-2 font-normal">
+          <dt class="sr-only">Cast</dt>
+          <dd class="text-slate-400">Idris Elba, John Cena, Thandiwe Newton</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
+</div>`
