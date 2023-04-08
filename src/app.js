@@ -168,12 +168,10 @@ export default function AppComponent() {
                     </ContainerComponent>
                 </div>
                 <div className={'border-t relative border-t-slate-500/30 pt-10 md:h-[1000px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent className={'relative'}>
-                        <div className={'absolute left-0 w-full px-8 top-[-50px]'}>
-                            <BrowserComponent className={'mb-8'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
-                            <EditorComponent height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
-                        </div>
-                    </ContainerComponent>
+                    <div className={'relative left-0 w-full max-w-[1200px] mx-auto'}>
+                        <BrowserComponent className={'absolute left-[50%] translate-x-[-50%] top-[-95px] w-[98%]'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
+                        <EditorComponent className={'absolute left-0 top-[420px] w-full'} height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
+                    </div>
                 </div>
             </SectionComponent>
         </>
