@@ -142,11 +142,9 @@ export default function AppComponent() {
                         Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] relative h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <ContainerComponent><HtmlCssTerminalCodeComponent /></ContainerComponent>
-                </div>
+                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] relative h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}><ContainerComponent><HtmlCssTerminalCodeComponent /></ContainerComponent></div>
             </SectionComponent>
-            <SectionComponent>
+            <SectionComponent className={'md:mt-0 mt-[1400px]'}>
                 <ContainerComponent>
                     <FeaturesComponent
                         color={'text-indigo-400'}
@@ -158,7 +156,7 @@ export default function AppComponent() {
                         Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the client.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <div className={'border-b mb-10 border-b-slate-500/30'}>
+                <div className={'border-b md:block hidden mb-10 border-b-slate-500/30'}>
                     <ContainerComponent>
                         <div className="relative">
                             <MediaQuerysComponent isSelected={true} sizeName={'sm'} fromLeft={'640'}/>
@@ -168,9 +166,9 @@ export default function AppComponent() {
                     </ContainerComponent>
                 </div>
                 <div className={'border-t relative border-t-slate-500/30 pt-10 md:h-[1000px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
-                    <div className={'relative left-0 w-full max-w-[1200px] mx-auto'}>
-                        <BrowserComponent className={'absolute left-[50%] translate-x-[-50%] top-[-95px] w-[98%]'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
-                        <EditorComponent className={'absolute left-0 top-[420px] w-full'} height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
+                    <div className={'relative max-w-[1200px] mx-auto'}>
+                        <BrowserComponent className={'absolute md:left-[50%] left-0 md:translate-x-[-50%] translate-x-0 md:top-[-95px] top-0 md:w-[98%] w-full'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
+                        <EditorComponent className={'absolute left-0 md:top-[400px] top-[587px] w-full'} height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
                     </div>
                 </div>
             </SectionComponent>
