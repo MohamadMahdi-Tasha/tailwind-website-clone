@@ -160,7 +160,7 @@ export default function AppComponent() {
                 <div className={'border-b border-b-slate-500/30'}>
                     <ContainerComponent>
                         <div className="relative">
-                            <MediaQuerysComponent isSelected={false} sizeName={'sm'} fromLeft={'640'}/>
+                            <MediaQuerysComponent isSelected={true} sizeName={'sm'} fromLeft={'640'}/>
                             <MediaQuerysComponent isSelected={false} sizeName={'md'} fromLeft={'768'}/>
                             <MediaQuerysComponent isSelected={false} sizeName={'lg'} fromLeft={'1024'}/>
                         </div>
