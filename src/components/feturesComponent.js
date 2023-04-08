@@ -48,7 +48,7 @@ export default function FeaturesComponent({img, color ,borderColor, title, subti
             <h6 className={`${color} font-bold text-lg mb-3`}>{title}</h6>
             <h1 className={'text-white font-bold text-4xl mb-5'}>{subtitle}</h1>
             <p className={'text-slate-500 font-medium mb-8'}>{children}</p>
-            <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600' tabIndex={'-1'}>{cta} ></button></a>
+            <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600 flex items-center' tabIndex={'-1'}><span className={'mr-2'}>{cta}</span> <IconComponent type={'chevron-right'}/></button></a>
             {(!hasNoButtons) ? <div className={'mt-9 md:w-[60%] w-[70%] flex gap-10 justify-around'}><SelectableButtonsHolder /></div> : false}
         </div>
     );

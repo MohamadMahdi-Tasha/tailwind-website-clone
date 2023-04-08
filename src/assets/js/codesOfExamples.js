@@ -122,3 +122,67 @@ export const fifthSectionsCode = `<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8
     </p>
   </div>
 </main>`
+
+export const sixthSectionsCode = `<div class='bg-slate-800 rounded-xl md:w-[48%] w-full'>
+    <div class='bg-slate-700/20 rounded-t-xl p-5 border-b border-b-slate-500/30'>
+        <div class='flex items-center justify-between mb-5'>
+            <h6 class='text-white font-semibold text-lg'>Projects</h6>
+            <button
+                class='px-3 py-2 rounded-md bg-blue-500 hover:bg-blue-400 text-white font-sm font-semibold'>
+                <span class='mr-2'>+</span> New
+            </button>
+        </div>
+        <form class="relative">
+            <svg width="20" height="20" fill="currentColor" class='text-slate-500 pointer-events-none absolute left-3 top-[50%] translate-y-[-50%]'>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+            </svg>
+            <input
+                class='pl-11 w-full pr-3 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:bg-transparent pt-2 pb-3 bg-slate-600 placeholder:text-slate-500 text-white border-t-2 border-t-slate-500/50 rounded-md'
+                type="text" aria-label="Filter projects" placeholder="Filter projects..."></input>
+        </form>
+    </div>
+    <div class='bg-slate-800 p-5'>
+        <div class='grid grid-cols-2 grid-rows-2 gap-4'>
+            <a class='p-3 block border-t-2 border-t-slate-500/30 rounded-md bg-slate-600 hover:bg-blue-500'
+            href="#">
+                <h6 class='text-white font-bold text-lg mb-2'>Api Integration</h6>
+                <h6 class='text-slate-400 font-light text-sm mb-4'>Engineering</h6>
+                <div class='flex'>
+                    <div class='w-5 h-5 rounded-full bg-indigo-900'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-800'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-700'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-600'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-500'></div>
+                </div>
+            </a>
+            <a class='p-3 block border-t-2 border-t-slate-500/30 rounded-md bg-slate-600 hover:bg-blue-500'
+            href="#">
+                <h6 class='text-white font-bold text-lg mb-2'>New Benefits Plan</h6>
+                <h6 class='text-slate-400 font-light text-sm mb-4'>Human Resources</h6>
+                <div class='flex'>
+                    <div class='w-5 h-5 rounded-full bg-indigo-900'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-800'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-700'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-600'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-500'></div>
+                </div>
+            </a>
+            <a class='p-3 block border-t-2 border-t-slate-500/30 rounded-md bg-slate-600 hover:bg-blue-500'
+            href="#">
+                <h6 class='text-white font-bold text-lg mb-2'>Onboarding Emails</h6>
+                <h6 class='text-slate-400 font-light text-sm mb-4'>Customer Success</h6>
+                <div class='flex'>
+                    <div class='w-5 h-5 rounded-full bg-indigo-900'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-800'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-700'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-600'></div>
+                    <div class='w-5 -ml-2 h-5 rounded-full bg-indigo-500'></div>
+                </div>
+            </a>
+            <a class='flex p-5 rounded-md border-2 border-dashed hover:border-solid hover:border-blue-500 border-slate-500/30 flex-col items-center justify-center gap-3 group'href="#">
+                <span class='group-hover:text-blue-500 text-slate-400 text-base'>+</span>
+                <span class='group-hover:text-blue-500 text-white font-semibold text-base'>New Project</span>
+            </a>
+        </div>
+    </div>
+</div>`
