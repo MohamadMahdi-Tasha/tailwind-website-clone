@@ -14,13 +14,13 @@ import FourthSectionIcon from './assets/img/section-icons/img-sect-4.png';
 import FifthSectionIcon from './assets/img/section-icons/img-sect-5.png';
 import SixthSectionIcon from './assets/img/section-icons/img-sect-6.png';
 import SeventhSectionIcon from './assets/img/section-icons/img-sect-7.png';
+import EighthSectionIcon from './assets/img/section-icons/img-sect-8.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
 import * as exampleCodes from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 import BrowserComponent from "./components/chunks/browserComponent";
-import {seventhHtmlCode} from "./assets/js/codesOfExamples";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -259,6 +259,20 @@ export default function AppComponent() {
                             codeSide2={exampleCodes.seventhHtmlCode} />
                     </div>
                 </ContainerComponent>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-slate-400'}
+                        img={EighthSectionIcon}
+                        title={'Dark mode'}
+                        subtitle={'Build whatever you want, seriously.'}
+                        borderColor={'border-slate-400'}
+                        cta={'Learn More'} hasNoButtons>
+                        Don’t want to be one of those websites that blinds people when they open it on their phone at 2am? Enable dark mode in your configuration file then throw <span className={'font-mono text-white'}>dark:</span> in front of any color utility to apply it when dark mode is active. Works for background colors, text colors, border colors, and even gradients.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <FeaturesCodeComponent code={exampleCodes.eightsSectionsCode}/>
             </SectionComponent>
         </>
     );
