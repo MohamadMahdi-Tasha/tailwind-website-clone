@@ -65,7 +65,7 @@ export default function EditorComponent(props) {
                         <div className={'border-b border-b-slate-500/30'}>
                             <button className={'text-cyan-500 after-content-[""] after:absolute after:bottom-[-1px] text-sm px-3 py-2 after:left-0 after:w-full after:bg-cyan-500 after:h-[1px] relative'}>{props.fileSide2}</button>
                         </div>
-                        <pre className={'h-[300px]'}>
+                        <pre className={'h-[150px]'}>
                             <code className={`line-numbers language-${props.languageSide2}`}>
                                 {props.codeSide2}
                             </code>

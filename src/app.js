@@ -209,50 +209,55 @@ export default function AppComponent() {
                         </div>
                     </ContainerComponent>
                 </div>
-                <ContainerComponent className={'flex items-start'}>
-                    <div>
-                        <h1 className={'font-bold text-white'}>Not into component frameworks?</h1>
-                        <p>Use Tailwind's @apply directive to extract repeated utility patterns into custom CSS classes just by copying and pasting the list of class names.</p>
-                        <a href="#"><button>Learn More <IconComponent type={'chevron-right'}/></button></a>
-                        <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/10">
-                            <article>
-                                <h2 className="text-lg font-semibold text-slate-900 pt-4 pb-2 px-4 sm:px-6 lg:px-4 xl:px-6 dark:text-slate-100 transition-opacity duration-[1.5s] delay-500 opacity-25">Weekly one-on-one</h2>
-                                <dl className="flex flex-wrap divide-y divide-slate-200 border-b border-slate-200 text-sm sm:text-base lg:text-sm xl:text-base dark:divide-slate-200/5 dark:border-slate-200/5">
-                                    <div className="px-4 sm:px-6 lg:px-4 xl:px-6 pb-4">
-                                        <dt className="sr-only">Date and time</dt>
-                                        <dd className="transition-opacity duration-[1.5s] delay-500 opacity-25">
-                                            <time dateTime="2020-11-15T10:00:00-05:00">Thu Nov 15, 2020 10:00am</time>
-                                            <time dateTime="2020-11-15T11:00:00-05:00">11:00am<span className="sr-only sm:not-sr-only"> EST</span></time>
-                                        </dd>
+                <ContainerComponent>
+                    <div className={'md:flex block justify-between pt-[100px] relative'}>
+                        <div className={'md:w-[48%] w-full'}>
+                            <div className={'mb-7'}>
+                                <h1 className={'text-3xl mb-2 font-extrabold text-slate-200'}>Not into component frameworks?</h1>
+                                <p className={'mb-3 text-base font-normal text-slate-400'}>Use Tailwind's <span className={'text-white font-mono'}>@apply</span> directive to extract repeated utility patterns into custom CSS classes just by copying and pasting the list of class names.</p>
+                                <a href="#"><button className='bg-slate-700 rounded-3xl px-4 py-2 font-bold text-[12px] text-white hover:bg-slate-600 flex items-center'><span className={'mr-2'}>Learn More</span> <IconComponent type={'chevron-right'}/></button></a>
+                            </div>
+                            <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/10">
+                                <article>
+                                    <h2 className="text-lg font-semibold text-slate-900 pt-4 pb-2 px-4 sm:px-6 lg:px-4 xl:px-6 dark:text-slate-100 transition-opacity duration-[1.5s] delay-500 opacity-25">Weekly one-on-one</h2>
+                                    <dl className="flex flex-wrap divide-y divide-slate-200 border-b border-slate-200 text-sm sm:text-base lg:text-sm xl:text-base dark:divide-slate-200/5 dark:border-slate-200/5">
+                                        <div className="px-4 sm:px-6 lg:px-4 xl:px-6 pb-4">
+                                            <dt className="sr-only">Date and time</dt>
+                                            <dd className="transition-opacity duration-[1.5s] delay-500 opacity-25 text-white">
+                                                <time dateTime="2020-11-15T10:00:00-05:00">Thu Nov 15, 2020 10:00am</time>
+                                                <time dateTime="2020-11-15T11:00:00-05:00">11:00am<span className="sr-only sm:not-sr-only"> EST</span></time>
+                                            </dd>
+                                        </div>
+                                        <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
+                                            <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Location</dt>
+                                            <dd className="transition-opacity duration-[1.5s] delay-500 opacity-25 text-white">Kitchener, <abbr title="Ontario">ON</abbr></dd>
+                                        </div>
+                                        <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
+                                            <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Description</dt>
+                                            <dd className="italic transition-opacity duration-[1.5s] delay-500 opacity-25 text-white">No meeting description</dd>
+                                        </div>
+                                        <div className="w-full flex-none flex items-center p-4 sm:py-5 sm:px-6 lg:p-4 xl:py-5 xl:px-6">
+                                            <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Attendees</dt>
+                                            <dd className="text-sm font-medium text-slate-700 bg-slate-100 rounded-full py-1 px-3 dark:bg-slate-700 dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Andrew McDonald</dd>
+                                        </div>
+                                    </dl>
+                                    <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 lg:gap-x-4 xl:gap-x-6 p-4 sm:px-6 sm:py-5 lg:p-4 xl:px-6 xl:py-5">
+                                        <div className="text-base font-medium rounded-lg bg-slate-100 text-slate-900 py-3 text-center cursor-pointer dark:bg-slate-600 dark:text-slate-400 dark:highlight-white/10">Decline</div>
+                                        <div className="text-base font-medium rounded-lg bg-sky-500 text-white py-3 text-center cursor-pointer dark:highlight-white/20">Accept</div>
                                     </div>
-                                    <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
-                                        <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Location</dt>
-                                        <dd className="transition-opacity duration-[1.5s] delay-500 opacity-25">Kitchener, <abbr title="Ontario">ON</abbr></dd>
-                                    </div>
-                                    <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
-                                        <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Description</dt>
-                                        <dd className="italic transition-opacity duration-[1.5s] delay-500 opacity-25">No meeting description</dd>
-                                    </div>
-                                    <div className="w-full flex-none flex items-center p-4 sm:py-5 sm:px-6 lg:p-4 xl:py-5 xl:px-6">
-                                        <dt className="w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Attendees</dt>
-                                        <dd className="text-sm font-medium text-slate-700 bg-slate-100 rounded-full py-1 px-3 dark:bg-slate-700 dark:text-slate-300 transition-opacity duration-[1.5s] delay-500 opacity-25">Andrew McDonald</dd>
-                                    </div>
-                                </dl>
-                                <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 lg:gap-x-4 xl:gap-x-6 p-4 sm:px-6 sm:py-5 lg:p-4 xl:px-6 xl:py-5">
-                                    <div className="text-base font-medium rounded-lg bg-slate-100 text-slate-900 py-3 text-center cursor-pointer dark:bg-slate-600 dark:text-slate-400 dark:highlight-white/10">Decline</div>
-                                    <div className="text-base font-medium rounded-lg bg-sky-500 text-white py-3 text-center cursor-pointer dark:highlight-white/20">Accept</div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
                         </div>
+                        <EditorComponent
+                            className={'md:w-[50%] w-[100vw] mt-[70px] md:static absolute top-[550px] -left-4'}
+                            openedSide={2}
+                            languageSide1={'css'}
+                            fileSide1={'styles.css'}
+                            codeSide1={exampleCodes.seventhCssCode}
+                            languageSide2={'html'}
+                            fileSide2={'index.html'}
+                            codeSide2={exampleCodes.seventhHtmlCode} />
                     </div>
-                    <EditorComponent
-                        openedSide={2}
-                        languageSide1={'css'}
-                        fileSide1={'styles.css'}
-                        codeSide1={exampleCodes.seventhCssCode}
-                        languageSide2={'html'}
-                        fileSide2={'index.html'}
-                        codeSide2={exampleCodes.seventhHtmlCode} />
                 </ContainerComponent>
             </SectionComponent>
         </>
