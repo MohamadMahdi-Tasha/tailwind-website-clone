@@ -208,9 +208,9 @@ export default function AppComponent() {
                         </div>
                     </ContainerComponent>
                 </div>
-                <ContainerComponent>
+                <ContainerComponent className={'flex items-start'}>
                     <div>
-                        <h1>Not into component frameworks?</h1>
+                        <h1 className={'font-bold text-white'}>Not into component frameworks?</h1>
                         <p>Use Tailwind's @apply directive to extract repeated utility patterns into custom CSS classes just by copying and pasting the list of class names.</p>
                         <a href="#"><button>Learn More <IconComponent type={'chevron-right'}/></button></a>
                         <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/10">
@@ -244,6 +244,14 @@ export default function AppComponent() {
                             </article>
                         </div>
                     </div>
+                    <EditorComponent
+                        openedSide={2}
+                        languageSide1={'css'}
+                        fileSide1={'styles.css'}
+                        codeSide1={`.mmd {color: red;}`}
+                        languageSide2={'html'}
+                        fileSide2={'index.html'}
+                        codeSide2={`<h1>color</h1>`} />
                 </ContainerComponent>
             </SectionComponent>
         </>
