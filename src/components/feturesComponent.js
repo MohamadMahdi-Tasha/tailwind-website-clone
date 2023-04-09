@@ -6,10 +6,11 @@ import IconComponent from "./chunks/iconComponent";
 
 export default function FeaturesComponent({img, color ,borderColor, title, subtitle, children, cta, hasNoButtons}) {
     // Some Inner Components
-    function SelectableButtonComponent({type}) {
+    function SelectableButtonComponent({type, isSelected}) {
         // Returning JSX
         return(
-            <button className={'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}>
+            <button
+                className={(isSelected) ? `flex flex-col gap-5 items-center justify-center text-sm ${color}` : 'flex flex-col gap-5 items-center justify-center text-sm text-slate-500 hover:text-slate-400'}>
                 <IconComponent type={type} />
                 {type.charAt(0).toUpperCase()}
                 {type.slice(1, type.length)}
@@ -23,36 +24,36 @@ export default function FeaturesComponent({img, color ,borderColor, title, subti
             return (
                 <>
 
-                    <SelectableButtonComponent type={'sizing'} />
-                    <SelectableButtonComponent type={'colors'} />
-                    <SelectableButtonComponent type={'typography'} />
-                    <SelectableButtonComponent type={'shadows'} />
+                    <SelectableButtonComponent isSelected type={'sizing'} />
+                    <SelectableButtonComponent isSelected={false} type={'colors'} />
+                    <SelectableButtonComponent isSelected={false} type={'typography'} />
+                    <SelectableButtonComponent isSelected={false} type={'shadows'} />
                 </>
             );
         } else if (title === 'Build anything' || title === 'Customization') {
             return (
                 <>
-                    <SelectableButtonComponent type={'simple'}/>
-                    <SelectableButtonComponent type={'playful'}/>
-                    <SelectableButtonComponent type={'elegant'}/>
-                    <SelectableButtonComponent type={'brutalist'}/>
+                    <SelectableButtonComponent isSelected type={'simple'}/>
+                    <SelectableButtonComponent isSelected={false} type={'playful'}/>
+                    <SelectableButtonComponent isSelected={false} type={'elegant'}/>
+                    <SelectableButtonComponent isSelected={false} type={'brutalist'}/>
                 </>
             );
         } else if (title === 'Component-driven') {
             return (
                 <>
-                    <SelectableButtonComponent type={'react'}/>
-                    <SelectableButtonComponent type={'vue'}/>
-                    <SelectableButtonComponent type={'angular'}/>
-                    <SelectableButtonComponent type={'blade'}/>
+                    <SelectableButtonComponent isSelected type={'react'}/>
+                    <SelectableButtonComponent isSelected={false} type={'vue'}/>
+                    <SelectableButtonComponent isSelected={false} type={'angular'}/>
+                    <SelectableButtonComponent isSelected={false} type={'blade'}/>
                 </>
             );
         } else if (title === 'Modern features') {
             return (
                 <>
-                    <SelectableButtonComponent type={'grid'}/>
-                    <SelectableButtonComponent type={'transform'}/>
-                    <SelectableButtonComponent type={'filter'}/>
+                    <SelectableButtonComponent isSelected type={'grid'}/>
+                    <SelectableButtonComponent isSelected={false} type={'transform'}/>
+                    <SelectableButtonComponent isSelected={false} type={'filter'}/>
                 </>
             );
         }

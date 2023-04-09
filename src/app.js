@@ -25,6 +25,8 @@ import * as exampleCodes from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 import BrowserComponent from "./components/chunks/browserComponent";
+import VscodeEditorComponent from './components/vscodeEditorComponent';
+import {eightsSectionsCode} from "./assets/js/codesOfExamples";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -314,6 +316,25 @@ export default function AppComponent() {
                     </FeaturesComponent>
                 </ContainerComponent>
                 <FeaturesCodeComponent code={exampleCodes.tenthSectionsCode}/>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <div className={'pb-[100px]'}>
+                        <FeaturesComponent
+                            color={'text-blue-400'}
+                            img={EleventhSectionIcon}
+                            title={'Editor tools'}
+                            subtitle={'World-class IDE integration.'}
+                            borderColor={'border-blue-400'}
+                            cta={'Learn More'} hasNoButtons>
+                            Worried about remembering all of these class names? The Tailwind CSS IntelliSense extension for VS Code has you covered. <br/><br/>
+                            Get intelligent autocomplete suggestions, linting, class definitions and more, all within your editor and with no configuration required.
+                        </FeaturesComponent>
+                    </div>
+                </ContainerComponent>
+                <div className={'border-t border-t-slate-100/20 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <div className={'max-w-[1200px] mx-auto relative'}><VscodeEditorComponent selfLang={'html'} selfCode={exampleCodes.eightsSectionsCode}/></div>
+                </div>
             </SectionComponent>
         </>
     );
