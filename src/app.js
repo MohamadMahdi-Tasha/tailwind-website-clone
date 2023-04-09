@@ -32,6 +32,7 @@ import LastSectionImage3 from './assets/img/last-section/img-3.png';
 import LastSectionImage4 from './assets/img/last-section/img-4.jpg';
 import LastSectionImage5 from './assets/img/last-section/img-5.jpg';
 import LastSectionImage6 from './assets/img/last-section/img-6.png';
+import FooterComponent from './components/footerComponent';
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -370,6 +371,7 @@ export default function AppComponent() {
                     </div>
                 </div>
             </SectionComponent>
+            <FooterComponent />
         </>
     );
 }
