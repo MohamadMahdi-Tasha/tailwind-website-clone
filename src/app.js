@@ -16,10 +16,11 @@ import SixthSectionIcon from './assets/img/section-icons/img-sect-6.png';
 import SeventhSectionIcon from './assets/img/section-icons/img-sect-7.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
-import { firstSectionsCode, secondSectionsCode, thirdSectionsCode, fifthSectionsCode, sixthSectionsCode, seventhSectionsCode, seventhSectionsCodePreview} from "./assets/js/codesOfExamples";
+import * as exampleCodes from "./assets/js/codesOfExamples";
 import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCodeComponent";
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 import BrowserComponent from "./components/chunks/browserComponent";
+import {seventhHtmlCode} from "./assets/js/codesOfExamples";
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -52,8 +53,8 @@ export default function AppComponent() {
                         </div>
                     </div>
                     <div className={'relative md:h-[500px] h-[750px]'}>
-                        <PreviewCodeComponent code={firstSectionsCode}/>
-                        <EditorComponent language={'html'} code={firstSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
+                        <PreviewCodeComponent code={exampleCodes.firstSectionsCode}/>
+                        <EditorComponent language={'html'} code={exampleCodes.firstSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4'}/>
                     </div>
                 </ContainerComponent>
             </SectionComponent>
@@ -116,7 +117,7 @@ export default function AppComponent() {
                             Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <FeaturesCodeComponent code={secondSectionsCode}/>
+                <FeaturesCodeComponent code={exampleCodes.secondSectionsCode}/>
             </SectionComponent>
             <SectionComponent>
                 <ContainerComponent>
@@ -130,7 +131,7 @@ export default function AppComponent() {
                         Because Tailwind is so low-level, it never encourages you to design the same site twice. Even with the same color palette and sizing scale, it's easy to build the same component with a completely different look in the next project.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <FeaturesCodeComponent code={thirdSectionsCode}/>
+                <FeaturesCodeComponent code={exampleCodes.thirdSectionsCode}/>
             </SectionComponent>
             <SectionComponent>
                 <ContainerComponent>
@@ -169,8 +170,8 @@ export default function AppComponent() {
                 </div>
                 <div className={'border-t relative border-t-slate-500/30 pt-10 md:h-[1000px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <div className={'relative max-w-[1200px] mx-auto'}>
-                        <BrowserComponent className={'absolute md:left-[50%] left-0 md:translate-x-[-50%] translate-x-0 md:top-[-95px] top-0 md:w-[98%] w-full'}><PreviewCodeComponent code={fifthSectionsCode} /></BrowserComponent>
-                        <EditorComponent className={'absolute left-0 md:top-[400px] top-[587px] w-full'} height={'h-[400px]'} language={'html'} code={fifthSectionsCode} />
+                        <BrowserComponent className={'absolute md:left-[50%] left-0 md:translate-x-[-50%] translate-x-0 md:top-[-95px] top-0 md:w-[98%] w-full'}><PreviewCodeComponent code={exampleCodes.fifthSectionsCode} /></BrowserComponent>
+                        <EditorComponent className={'absolute left-0 md:top-[400px] top-[587px] w-full'} height={'h-[400px]'} language={'html'} code={exampleCodes.fifthSectionsCode} />
                     </div>
                 </div>
             </SectionComponent>
@@ -186,7 +187,7 @@ export default function AppComponent() {
                         Want to style something on hover? Stick <span className={'text-white'}>hover:</span> at the beginning of the class you want to add. Works for <span className={'text-white'}>focus:</span>, <span className={'text-white'}>active:</span>, <span className={'text-white'}>disabled:</span>, <span className={'text-white'}>focus-within:</span>, <span className={'text-white'}>focus-visible:</span>, and even fancy states we invented ourselves like <span className={'text-white'}>group-hover</span>.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <FeaturesCodeComponent code={sixthSectionsCode}/>
+                <FeaturesCodeComponent code={exampleCodes.sixthSectionsCode}/>
             </SectionComponent>
             <SectionComponent>
                 <ContainerComponent>
@@ -203,8 +204,8 @@ export default function AppComponent() {
                 <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <ContainerComponent>
                         <div className={'relative md:h-auto h-[1130px]'}>
-                            <EditorComponent openedFileIndex={4} openFiles={['Movies.js','Nav.js','NavItem.js','List.js','ListItem.js']} language={'html'} height={'h-[600px]'} code={seventhSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
-                            <PreviewCodeComponent code={seventhSectionsCodePreview}/>
+                            <EditorComponent openedFileIndex={4} openFiles={['Movies.js','Nav.js','NavItem.js','List.js','ListItem.js']} language={'html'} height={'h-[600px]'} code={exampleCodes.seventhSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
+                            <PreviewCodeComponent code={exampleCodes.seventhSectionsCodePreview}/>
                         </div>
                     </ContainerComponent>
                 </div>
@@ -248,10 +249,10 @@ export default function AppComponent() {
                         openedSide={2}
                         languageSide1={'css'}
                         fileSide1={'styles.css'}
-                        codeSide1={`.mmd {color: red;}`}
+                        codeSide1={exampleCodes.seventhCssCode}
                         languageSide2={'html'}
                         fileSide2={'index.html'}
-                        codeSide2={`<h1>color</h1>`} />
+                        codeSide2={exampleCodes.seventhHtmlCode} />
                 </ContainerComponent>
             </SectionComponent>
         </>

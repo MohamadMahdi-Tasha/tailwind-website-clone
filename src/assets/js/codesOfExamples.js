@@ -281,3 +281,20 @@ export const seventhSectionsCodePreview = `<div class="border-t-2 absolute left-
         </li>
     </ul>
 </div>`
+
+export const seventhCssCode = `.btn {
+  @apply text-base font-medium rounded-lg p-3;
+}
+
+.btn--primary {
+  @apply bg-sky-500 text-white;
+}
+
+.btn--secondary {
+  @apply bg-slate-100 text-slate-900;
+}`
+
+export const seventhHtmlCode = `<footer class="grid grid-cols-2 gap-x-6">
+    <button class="btn btn--secondary">Decline</button>
+    <button class="btn btn--primary">Accept</button>
+</footer>`
