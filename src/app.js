@@ -26,7 +26,12 @@ import HtmlCssTerminalCodeComponent from "./components/chunks/htmlCssTerminalCod
 import MediaQuerysComponent from "./components/chunks/mediaQuerysComponent";
 import BrowserComponent from "./components/chunks/browserComponent";
 import VscodeEditorComponent from './components/vscodeEditorComponent';
-import {eightsSectionsCode} from "./assets/js/codesOfExamples";
+import LastSectionImage1 from './assets/img/last-section/img-1.png';
+import LastSectionImage2 from './assets/img/last-section/img-2.png';
+import LastSectionImage3 from './assets/img/last-section/img-3.png';
+import LastSectionImage4 from './assets/img/last-section/img-4.jpg';
+import LastSectionImage5 from './assets/img/last-section/img-5.jpg';
+import LastSectionImage6 from './assets/img/last-section/img-6.png';
 
 // Creating Functional Component And Exporting It As Defualt
 export default function AppComponent() {
@@ -334,6 +339,33 @@ export default function AppComponent() {
                 </ContainerComponent>
                 <div className={'border-t border-t-slate-100/20 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
                     <div className={'max-w-[1200px] mx-auto relative'}><VscodeEditorComponent selfLang={'html'} selfCode={exampleCodes.eightsSectionsCode}/></div>
+                </div>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <div className={'pb-10'}>
+                        <FeaturesComponent
+                            color={'text-indigo-400'}
+                            img={TwelvethSectionIcon}
+                            title={'Ready-made components'}
+                            subtitle={'Move even faster with Tailwind UI.'}
+                            borderColor={'border-indigo-400'}
+                            cta={'Learn More'} hasNoButtons>
+                            Tailwind UI is a collection of beautiful, fully responsive UI components, designed and developed by us, the creators of Tailwind CSS. It's got hundreds of ready-to-use examples to choose from, and is guaranteed to help you find the perfect starting point for what you want to build.
+                        </FeaturesComponent>
+                    </div>
+                </ContainerComponent>
+                <div className={'border-t border-t-slate-100/20 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <div className={'max-w-[1200px] mx-auto relative'}>
+                        <div className={'relative h-[700px] top-[-70px]'}>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '3.55556%', left: '2.22589%', width: '19.4559%', opacity: '1', transform: 'none',}} src={LastSectionImage1} alt=""/>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '0%', left: '23.6603%', width: '46.7436%', opacity: '1', transform: 'none',}} src={LastSectionImage2} alt=""/>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '6.96296%', left: '72.3825%', width: '25.3916%', opacity: '1', transform: 'none',}} src={LastSectionImage3} alt=""/>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '42.8148%', left: '0%', width: '38.9118%', opacity: '1', transform: 'none',}} src={LastSectionImage4} alt=""/>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '42.8148%', left: '40.8904%', width: '36.3561%', opacity: '1', transform: 'none',}} src={LastSectionImage5} alt=""/>
+                            <img className={'absolute shadow-xl rounded-lg'} style={{top: '42.8148%', left: '79.2251%', width: '20.7749%', opacity: '1', transform: 'none',}} src={LastSectionImage6} alt=""/>
+                        </div>
+                    </div>
                 </div>
             </SectionComponent>
         </>
