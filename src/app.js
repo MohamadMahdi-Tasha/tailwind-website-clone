@@ -291,7 +291,14 @@ export default function AppComponent() {
                         Use the tailwind.config.js file to craft your own design system, then let Tailwind transform it into your own custom CSS framework.
                     </FeaturesComponent>
                 </ContainerComponent>
-                <FeaturesCodeComponent code={exampleCodes.eightsSectionsCode}/>
+                <div className={'border-t border-t-slate-100/20 pt-10 md:h-[650px] h-auto bg-[url("./assets/img/img-sect-2.png")] bg-top bg-no-repeat bg-cover'}>
+                    <ContainerComponent>
+                        <div className={'relative md:h-auto h-[1130px]'}>
+                            <EditorComponent language={'json'} height={'h-[600px]'} code={exampleCodes.ninethSectionsCode} className={'md:w-[50%] w-[100vw] absolute md:right-0 right-auto md:left-auto -left-4 md:top-[-104px] top-[400px] md:bottom-auto bottom-0'}/>
+                            <PreviewCodeComponent code={exampleCodes.ninethSectionsPreview}/>
+                        </div>
+                    </ContainerComponent>
+                </div>
             </SectionComponent>
         </>
     );

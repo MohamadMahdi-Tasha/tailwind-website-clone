@@ -375,3 +375,40 @@ export const eightsSectionsCode = `<div class="md:w-[48%] w-full">
       </div>
     </div>
 </div>`
+
+export const ninethSectionsPreview = `<div class="md:w-[48%] w-full bg-slate-700 p-4 rounded-xl"><div class="bg-slate-800 border-slate-500/30 p-3 grid grid-cols-2 items-center gap-5"><div class="space-y-8"><div><div class="flex items-center justify-between border-b border-slate-200/10 pb-1"><h6 class="font-mono text-xs text-slate-500">font-display</h6><h6 class="font-mono text-xs text-slate-500">Inter</h6></div><h6 class="mt-4 col-span-2 text-4xl sm:text-5xl lg:text-4xl xl:text-5xl text-slate-200">AaBbCc</h6></div><div><div class="flex items-center justify-between border-b border-slate-200/10 pb-1"><h6 class="font-mono text-xs text-slate-500">font-body</h6><h6 class="font-mono text-xs text-slate-500">14pt</h6></div><p class="text-sm leading-6 text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue gravida cras quis ac duis pretium ullamcorper consequat. Integer pellentesque eu.</p></div></div><div class="space-y-8"><div class="p-3 bg-slate-900 border-2 border-slate-700 rounded-xl"><div class="flex items-center justify-between border-b border-slate-200/10 pb-1"><h6 class="font-mono text-xs text-slate-500">bg-primary</h6><h6 class="font-mono text-xs text-slate-500">50-900</h6></div><div class="grid grid-cols-5 gap-2 pt-2"><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-50"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-100"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-200"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-300"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-400"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-500"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-600"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-700"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-800"></div><div class="w-8 h-8 rounded-sm border-t border-t-primary-300/30 bg-primary-900"></div></div></div><div class="p-3 bg-slate-900 border-2 border-slate-700 rounded-xl"><div class="flex items-center justify-between border-b border-slate-200/10 pb-1"><h6 class="font-mono text-xs text-slate-500">bg-secondary</h6><h6 class="font-mono text-xs text-slate-500">50-900</h6></div><div class="grid grid-cols-5 gap-2 pt-2"><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-50"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-100"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-200"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-300"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-400"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-500"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-600"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-700"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-800"></div><div class="w-8 h-8 rounded-sm border-t border-t-secondary-300/30 bg-secondary-900"></div></div></div></div></div></div>`
+
+export const ninethSectionsCode = `module.exports = {
+  theme: {
+    fontFamily: {
+      display: ['Inter', 'system-ui', 'sans-serif'],
+      body: ['Inter', 'system-ui', 'sans-serif'],
+    },
+    colors: {
+      primary: {
+        50: '#eff6ff',
+        100: '#dbeafe',
+        200: '#bfdbfe',
+        300: '#93c5fd',
+        400: '#60a5fa',
+        500: '#3b82f6',
+        600: '#2563eb',
+        700: '#1d4ed8',
+        800: '#1e40af',
+        900: '#1e3a8a',
+      },
+      secondary: {
+        50: '#f8fafc',
+        100: '#f1f5f9',
+        200: '#e2e8f0',
+        300: '#cbd5e1',
+        400: '#94a3b8',
+        500: '#64748b',
+        600: '#475569',
+        700: '#334155',
+        800: '#1e293b',
+        900: '#0f172a',
+      },
+    },
+  },
+}`
