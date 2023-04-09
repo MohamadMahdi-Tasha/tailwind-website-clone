@@ -15,6 +15,10 @@ import FifthSectionIcon from './assets/img/section-icons/img-sect-5.png';
 import SixthSectionIcon from './assets/img/section-icons/img-sect-6.png';
 import SeventhSectionIcon from './assets/img/section-icons/img-sect-7.png';
 import EighthSectionIcon from './assets/img/section-icons/img-sect-8.png';
+import NinethSectionIcon from './assets/img/section-icons/img-sect-9.png';
+import TenthSectionIcon from './assets/img/section-icons/img-sect-10.png';
+import EleventhSectionIcon from './assets/img/section-icons/img-sect-11.png';
+import TwelvethSectionIcon from './assets/img/section-icons/img-sect-12.png';
 import FeaturesComponent from "./components/feturesComponent";
 import FeaturesCodeComponent from "./components/chunks/featuresCodeComponent";
 import * as exampleCodes from "./assets/js/codesOfExamples";
@@ -266,10 +270,25 @@ export default function AppComponent() {
                         color={'text-slate-400'}
                         img={EighthSectionIcon}
                         title={'Dark mode'}
-                        subtitle={'Build whatever you want, seriously.'}
+                        subtitle={'Now with Dark Mode.'}
                         borderColor={'border-slate-400'}
                         cta={'Learn More'} hasNoButtons>
                         Don’t want to be one of those websites that blinds people when they open it on their phone at 2am? Enable dark mode in your configuration file then throw <span className={'font-mono text-white'}>dark:</span> in front of any color utility to apply it when dark mode is active. Works for background colors, text colors, border colors, and even gradients.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <FeaturesCodeComponent code={exampleCodes.eightsSectionsCode}/>
+            </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-pink-400'}
+                        img={NinethSectionIcon}
+                        title={'Customization'}
+                        subtitle={'Extend it, tweak it, change it.'}
+                        borderColor={'border-pink-400'}
+                        cta={'Learn More'}>
+                        Tailwind includes an expertly crafted set of defaults out-of-the-box, but literally everything can be customized — from the color palette to the spacing scale to the box shadows to the mouse cursor. <br/><br/>
+                        Use the tailwind.config.js file to craft your own design system, then let Tailwind transform it into your own custom CSS framework.
                     </FeaturesComponent>
                 </ContainerComponent>
                 <FeaturesCodeComponent code={exampleCodes.eightsSectionsCode}/>

@@ -29,7 +29,7 @@ export default function FeaturesComponent({img, color ,borderColor, title, subti
                     <SelectableButtonComponent type={'shadows'} />
                 </>
             );
-        } else if (title === 'Build anything') {
+        } else if (title === 'Build anything' || title === 'Customization') {
             return (
                 <>
                     <SelectableButtonComponent type={'simple'}/>
