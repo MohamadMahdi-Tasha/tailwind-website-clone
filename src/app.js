@@ -300,6 +300,21 @@ export default function AppComponent() {
                     </ContainerComponent>
                 </div>
             </SectionComponent>
+            <SectionComponent>
+                <ContainerComponent>
+                    <FeaturesComponent
+                        color={'text-indigo-400'}
+                        img={TenthSectionIcon}
+                        title={'Modern features'}
+                        subtitle={'Cutting-edge is our comfort zone.'}
+                        borderColor={'border-indigo-400'}
+                        cta={'Learn More'}>
+                        Tailwind is unapologetically modern, and takes advantage of all the latest and greatest CSS features to make the developer experience as enjoyable as possible. <br/> <br/>
+                        We've got first-class CSS grid support, composable transforms and gradients powered by CSS variables, support for modern state selectors like <span className={'text-white'}>:focus-visible</span>, and tons more.
+                    </FeaturesComponent>
+                </ContainerComponent>
+                <FeaturesCodeComponent code={exampleCodes.tenthSectionsCode}/>
+            </SectionComponent>
         </>
     );
 }

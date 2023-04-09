@@ -47,6 +47,14 @@ export default function FeaturesComponent({img, color ,borderColor, title, subti
                     <SelectableButtonComponent type={'blade'}/>
                 </>
             );
+        } else if (title === 'Modern features') {
+            return (
+                <>
+                    <SelectableButtonComponent type={'grid'}/>
+                    <SelectableButtonComponent type={'transform'}/>
+                    <SelectableButtonComponent type={'filter'}/>
+                </>
+            );
         }
     }
 

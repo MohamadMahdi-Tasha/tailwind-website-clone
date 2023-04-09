@@ -412,3 +412,21 @@ export const ninethSectionsCode = `module.exports = {
     },
   },
 }`
+
+export const tenthSectionsCode = `<div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 md:w-[48%] w-full">
+  <div>
+    <div class="bg-pink-600 w-full h-[150px] rounded-xl"></div>
+  </div>
+  <div class="col-start-3">
+    <div class="bg-pink-600 w-full h-[150px] rounded-xl"></div>
+  </div>
+  <div>
+    <div class="bg-pink-600 w-full h-[150px] rounded-xl"></div>
+  </div>
+  <div>
+    <div class="bg-pink-600 w-full h-[150px] rounded-xl"></div>
+  </div>
+  <div class="row-start-1 col-start-2 col-span-2">
+    <div class="bg-pink-600 w-full h-[150px] rounded-xl"></div>
+  </div>
+</div>`
